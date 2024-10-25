@@ -87,8 +87,8 @@ const Heroone=()=>{
 
 
                     <div className="md:pt-[20rem] lg:pt-[21rem] xl:pt-[26rem] pt-72 md:block  gap-2  m-auto flex flex-col">
-                        <button className="bg-blue-600 text-white font-semibold mt-2 text-[10px] py-2 px-16 rounded-[8px] ml-6">Order Now</button>
-                        <button className="bg-white text-neutral-600 mt-2 font-semibold text-[10px] py-2 px-16 rounded-[8px] ml-6">Demo Drive</button>
+                        <button className="bg-zinc-900 text-neutral-400 font-semibold mt-2 text-[10px] py-2 px-16  ml-6">Order Now</button>
+                        <button className="bg-zinc-900 text-neutral-400 mt-2 font-semibold text-[10px] py-2 px-16  ml-6">Demo Drive</button>
                     </div>
                 </div>
             </div>
