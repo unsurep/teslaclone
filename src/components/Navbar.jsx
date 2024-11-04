@@ -1,6 +1,6 @@
 'use client'
 
-import Image from "next/image"
+
 import Link from "next/link"
 import React, { useState } from "react"
 
@@ -9,12 +9,20 @@ import { TbWorld } from "react-icons/tb";
 import { FaRegUserCircle } from "react-icons/fa";
 import { IoMenuSharp } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
+import { Image } from "next/image";
+import m3a from '../components/Images/m3a.jpg'
 
 const Navbar=()=>{
-    const [showMenu, setShowMenu]=useState(false)
+    const [showMenu, setShowMenu]=useState(false);
+    const [showVehicle, setShowVehicle]=useState(false);
 
     const toggleShowMenu=()=>{
         setShowMenu(!showMenu)
+    }
+
+    const toggleShowVehicle=()=>{
+        setShowVehicle(!showVehicle)
+        
     }
 
 
@@ -30,30 +38,123 @@ const Navbar=()=>{
             </div>
 
             
-            <div className="flex justify-between items-center px-[1rem] md:px-[2rem] pt-[3.5rem] ">
+            <div className="flex justify-between items-center px-[1rem] md:px-[3rem] pt-[3.5rem] ">
 
                 <div>
                     <img src='/images/logo.png ' width={120} height={120} alt="image"/>
                 </div>
 
-                <div className="">
+                <div className=" relative">
                     <ul className="hidden lg:flex gap-5 text-sm flex-grow ">
-                        <li className="hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer">Vehicles</li>
+                        <li onClick={toggleShowVehicle} className="hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer">Vehicles</li>
                         {/* drop down for vehicle */}
 
-                        <div>
-                            {/* cars */}
-                            <div></div>
+                        {showVehicle===true ? <div className="bg-white h-[90vh] top-10 left-0 absolute w-[50vw] flex py-[3rem] px-[1rem]">
+
+                            <div className="grid grid-cols-3 gap-2">
+                                <div className="w-fit">
+                                    <div>
+                                        <img src="/images/ms.jpg" width={150} height={150} alt="carImage"/>
+                                    </div>
+
+                                    <h1 className="">Model S</h1>
+                                    <div className="flex gap-3">
+                                        <button><u>Learn</u></button>
+                                        <button><u>Order</u></button>
+                                    </div>
+                                </div>
+
+                                <div className="w-fit">
+                                    <div>
+                                        <img src="/images/ms.jpg" width={150} height={150} alt="carImage"/>
+                                    </div>
+
+                                    <h1 className="text-center">Model S</h1>
+                                    <div className="flex gap-3 justify-center">
+                                        <button><u>Learn</u></button>
+                                        <button><u>Order</u></button>
+                                    </div>
+                                </div>
+
+                                <div className="w-fit">
+                                    <div>
+                                        <img src="/images/ms.jpg" width={150} height={150} alt="carImage"/>
+                                    </div>
+
+                                    <h1 className="text-center">Model S</h1>
+                                    <div className="flex gap-3 justify-center">
+                                        <button><u>Learn</u></button>
+                                        <button><u>Order</u></button>
+                                    </div>
+                                </div>
+
+                                <div className="w-fit">
+                                    <div>
+                                        <img src="/images/ms.jpg" width={150} height={150} alt="carImage"/>
+                                    </div>
+
+                                    <h1 className="text-center">Model S</h1>
+                                    <div className="flex gap-3 justify-center">
+                                        <button><u>Learn</u></button>
+                                        <button><u>Order</u></button>
+                                    </div>
+                                </div>
+
+                                <div className="w-fit">
+                                    <div>
+                                        <img src="/images/ms.jpg" width={150} height={150} alt="carImage"/>
+                                    </div>
+
+                                    <h1 className="text-center">Model S</h1>
+                                    <div className="flex gap-3 justify-center">
+                                        <button><u>Learn</u></button>
+                                        <button><u>Order</u></button>
+                                    </div>
+                                </div>
+
+                                <div className="w-fit">
+                                    <div>
+                                        <img src="/images/ms.jpg" width={150} height={150} alt="carImage"/>
+                                    </div>
+
+                                    <h1 className="text-center">Model S</h1>
+                                    <div className="flex gap-3 justify-center">
+                                        <button><u>Learn</u></button>
+                                        <button><u>Order</u></button>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+
+
+                            <div className="ml-auto">
+                                <ul className="border-l">
+                                    <li>Inventory</li>
+                                    <li>Used Cars</li>
+                                    <li>Demo Drive</li>
+                                    <li>Trade-in</li>
+                                    <li>Compare</li>
+                                    <li>Help Me Charge</li>
+                                    <li>Fleet</li>
+                                    <li>Semi</li>
+                                    <li>Roster</li>
+                                    <li>Federal Tax Credit</li>
+                                </ul>
+                            </div>
 
 
 
 
 
 
-                            {/* writeup */}
-                            <div></div>
-                        </div>
 
+
+                        </div> : '' }
+
+
+
+                        
 
 
 
@@ -74,6 +175,7 @@ const Navbar=()=>{
                     <p className="hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer"><FaRegUserCircle /></p>
                 </div>
 
+                {/* toggle menu drop down */}
                 <div onClick={toggleShowMenu} className="lg:hidden ">
                     {showMenu===true?
                     
@@ -91,7 +193,7 @@ const Navbar=()=>{
                             <li>Country</li>
                             <li>Account</li>
                         </ul>
-                    </div></div> :  <p  className="px-4 py-1 bg-neutral-300 rounded-[6px] font-semibold cursor pointer text-sm">Menu</p> }
+                    </div></div> :  <p  className="px-4 py-1 bg-neutral-300 rounded-[6px] font-semibold cursor pointer text-sm;">Menu</p> }
                 
                 </div>
 
@@ -109,4 +211,3 @@ const Navbar=()=>{
 
 export default Navbar;
 
-{/* <p  className="px-4 py-1 bg-neutral-300 rounded-[6px] font-semibold cursor pointer text-sm">Menu</p> */}

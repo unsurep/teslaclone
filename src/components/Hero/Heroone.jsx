@@ -11,24 +11,25 @@ const Heroone=()=>{
             <div className="bg-cover bg-center bg-no-repeat h-[90vh] rounded-lg mx-[1rem] md:mx-[2rem] lg:mx-[3rem] mt-[2rem] " style={{ backgroundImage: "url('/images/my1.jpg')" }}>
                 <div className=" items-center flex flex-col w-full pt-5">
                     <div className="flex flex-col items-center gap-3">
-                        <p className="text-[2rem] lg:text-[3rem] text-neutral-500 font-bold ">Model Y</p>
+                        <p className="text-[2rem] lg:text-[3rem] text-neutral-800 font-bold ">Model Y</p>
                         <u className="text-sm lg:text-[1rem] text-neutral-600 font-bold">0% ARP Avaliable</u>
                         <p className="text-sm lg:text-[1rem] text-neutral-600 font-bold">Lease Starting at $349/mo</p>
                     </div>
 
 
-                    <div className="pt-60 lg:pt-[20rem] xl:pt-[20rem] md:block  gap-2  m-auto flex flex-col">
+                    <div className="pt-60 lg:pt-[20rem] h-[50vh] md:block  gap-2  m-auto flex flex-col">
                         <button className="bg-blue-600 text-white font-semibold mt-2 text-[10px] py-2 px-16 rounded-[8px] ml-6">Order Now</button>
                         <button className="bg-white text-neutral-600 mt-2 font-semibold text-[10px] py-2 px-16 rounded-[8px] ml-6">Demo Drive</button>
                     </div>
                 </div>
             </div>
+            
 
             {/* Model 3 */}
             <div className="bg-cover bg-center bg-no-repeat h-screen rounded-lg mx-[1rem] md:mx-[2rem] lg:mx-[3rem] mt-[2rem] " style={{ backgroundImage: "url('/images/m3a.jpg')" }}>
             <div className=" items-center flex flex-col w-full pt-5">
                 <div className="flex flex-col items-center gap-3">
-                    <p className="text-[2rem] lg:text-[3rem] text-white font-bold ">Model 3</p>
+                    <p className="text-[2rem] lg:text-[3rem] text-neutral-500 font-bold ">Model 3</p>
                     <u className="text-sm lg:text-[1rem] text-white font-bold">0% ARP Avaliable</u>
                     <p className="text-sm lg:text-[1rem] text-white font-bold">Lease Starting at $349/mo</p>
                 </div>
@@ -45,7 +46,7 @@ const Heroone=()=>{
             <div className="bg-cover bg-center bg-no-repeat h-screen rounded-lg mx-[1rem] md:mx-[2rem] lg:mx-[3rem] mt-[2rem] " style={{ backgroundImage: "url('/images/mx.jpg')" }}>
                 <div className=" items-center flex flex-col w-full pt-5">
                     <div className="flex flex-col items-center gap-3">
-                        <p className="text-[2rem] lg:text-[3rem] text-black font-bold ">Model x</p>
+                        <p className="text-[2rem] lg:text-[3rem] text-neutral-500 font-bold ">Model x</p>
                         <p className="text-sm lg:text-[1rem] text-black font-bold ">From $65,990</p>
                         <u className="text-sm lg:text-[1rem] text-black font-bold">After Federal Taxx Credit $7,500</u>
                         <u className="text-sm lg:text-[1rem] text-black font-bold">and Est. Gas Saving $6,500</u>
@@ -63,7 +64,7 @@ const Heroone=()=>{
             <div className="bg-cover bg-center bg-no-repeat h-screen rounded-lg mx-[1rem] md:mx-[2rem] lg:mx-[3rem] mt-[2rem] " style={{ backgroundImage: "url('/images/ms.jpg')" }}>
                 <div className=" items-center flex flex-col w-full pt-5">
                     <div className="flex flex-col items-center gap-3">
-                        <p className="text-[2rem] lg:text-[3rem] text-black font-bold ">Model S</p>
+                        <p className="text-[2rem] lg:text-[3rem] text-neutral-500 font-bold ">Model S</p>
                         <p className="text-sm lg:text-[1rem] text-black font-bold">From $68,490</p>
                         <u className="text-sm lg:text-[1rem] text-black font-bold">After Est. Gas Saving $6,500</u>
                     </div>
@@ -98,7 +99,7 @@ const Heroone=()=>{
                 {/* solar panel A */}
                 <div className="bg-cover bg-center bg-no-repeat   rounded-lg mx-[1rem] md:mx-[2rem] lg:mx-[3rem] md:w-[60vw] mt-[2rem] " style={{ backgroundImage: "url('/images/roof1.jpg')" }}>
                     <div className="flex flex-col items-center pt-16">
-                        <h1 className="text-[2rem] lg:text-[3rem] text-white font-bold">Solar Panels</h1>
+                        <h1 className="text-[2rem] lg:text-[3rem] text-neutral-500 font-bold">Solar Panels</h1>
                         <p className="underline text-sm lg:text-[1rem] text-white font-bold">Schedule a Virtual Consultation</p>
                     </div>
 
@@ -113,7 +114,7 @@ const Heroone=()=>{
                 {/* Solar panel B */}
                 <div className="bg-cover bg-center bg-no-repeat rounded-lg mx-[1rem] md:mx-[2rem] lg:mx-[3rem] md:w-[60vw] mt-[2rem] " style={{ backgroundImage: "url('/images/roof2.jpg')" }}>
                     <div className="flex flex-col items-center pt-16">
-                        <h1 className="text-[2rem] lg:text-[3rem] text-white font-bold">Solar Roof</h1>
+                        <h1 className="text-[2rem] lg:text-[3rem] text-neutral-500 font-bold">Solar Roof</h1>
                         <p className="text-sm lg:text-[1rem] text-white font-bold">Produce Clean Energy From Your Roof</p>
                     </div>
 
@@ -128,7 +129,7 @@ const Heroone=()=>{
             <div className="bg-cover bg-center bg-no-repeat h-screen rounded-lg mx-[1rem] md:mx-[2rem] lg:mx-[3rem] mt-[2rem] " style={{ backgroundImage: "url('/images/wp.jpg')" }}>
                 <div className=" items-center flex flex-col w-full pt-8">
                     <div className="flex flex-col items-center gap-3">
-                        <p className="text-[2rem] lg:text-[3rem] text-white font-bold ">Powerwall</p>
+                        <p className="text-[2rem] lg:text-[3rem] text-neutral-500 font-bold ">Powerwall</p>
                     </div>
 
 
@@ -143,7 +144,7 @@ const Heroone=()=>{
             <div className="bg-cover bg-center bg-no-repeat h-screen rounded-lg mx-[1rem] md:mx-[2rem] lg:mx-[3rem] mt-[2rem] " style={{ backgroundImage: "url('/images/charger.jpg')" }}>
                 <div className=" items-center flex flex-col w-full pt-8">
                     <div className="flex flex-col items-center gap-3">
-                        <p className="text-[2rem] lg:text-[3rem] text-white font-bold ">Accessories</p>
+                        <p className="text-[2rem] lg:text-[3rem] text-neutral-500 font-bold ">Accessories</p>
                     </div>
 
 
@@ -162,7 +163,7 @@ const Heroone=()=>{
                         <video src="/videos/teslav.mp4" width={0} height={0} alt='video' className="w-[100rem] rounded-lg" controls/>
                     </div>
 
-                    <div className="md:hidden absolute left-[1rem] bottom-[5rem] text-white w-fit ">
+                    <div className="md:hidden absolute left-[1rem] bottom-[5rem] text-neutral-500 w-fit ">
                         <h1 className="text-sm font-bold">We are Tesla</h1>
                         <button className="bg-slate-200 text-zinc-800 text-sm w-full py-1 mt-1 rounded-md ">Join Tesla</button>
                     </div>
