@@ -8,7 +8,7 @@ const Footer=()=>{
 
     return (
         <>
-            <footer className=" text-sm flex flex-col gap-4 items-center justify-center my-[2rem] text-gray-600 text-[10px] mx-[1rem] md:mx-[2rem] lg:mx-[3rem] ">
+            <footer className=" md:text-sm flex flex-col gap-4 items-center justify-center my-[2rem] text-gray-600 text-[10px] mx-[1rem] md:mx-[2rem] lg:mx-[3rem] ">
                 
                 <div className=" flex">
                     <sup>1</sup><p>Monthly lease payment excludes taxes and fees,  is based on $44,990 Model Y Long Range Rear-Wheel  <br /> Drive purchase price and is subject to change at any time.  Requires $2,999 down with 36 months and <br /> 10,000 miles. Subject to credit approval and available  in select U.S. states. Terms apply.</p>
