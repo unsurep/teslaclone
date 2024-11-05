@@ -49,78 +49,84 @@ const Navbar=()=>{
                         <li onClick={toggleShowVehicle} className="hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer">Vehicles</li>
                         {/* drop down for vehicle */}
 
-                        {showVehicle===true ? <div className="bg-white h-[90vh] top-10 left-0 absolute w-[50vw] flex py-[3rem] px-[1rem]">
+                        {showVehicle===true ? <div className="bg-white h-[80vh] top-[6rem] left-0 absolute w-[50vw] flex py-[1rem] px-[1rem]">
 
                             <div className="grid grid-cols-3 gap-2">
-                                <div className="w-fit">
+                                {/* model s */}
+                                <div className="w-fit h-fit">
                                     <div>
-                                        <img src="/images/ms.jpg" width={150} height={150} alt="carImage"/>
+                                        <img src="/images/msbg.png" width={150} height={150} alt="carImage" className="cursor-pointer"/>
                                     </div>
 
-                                    <h1 className="">Model S</h1>
-                                    <div className="flex gap-3">
+                                    <h1 className="text-center pt-5 font-bold">Model S</h1>
+                                    <div className="flex gap-3 justify-center pt-3 text-[12px] text-neutral-700">
+                                        <button><u>Learn</u></button>
+                                        <button><u>Order</u></button>
+                                    </div>
+                                </div>
+                                
+                                {/* model 3 */}
+                                <div className="w-fit h-fit">
+                                    <div>
+                                        <img src="/images/m3bg.png" width={150} height={150} alt="carImage" className="cursor-pointer"/>
+                                    </div>
+
+                                    <h1 className="text-center  pt-5 font-bold">Model 3</h1>
+                                    <div className="flex gap-3 justify-center pt-3 text-[12px] text-neutral-700">
                                         <button><u>Learn</u></button>
                                         <button><u>Order</u></button>
                                     </div>
                                 </div>
 
-                                <div className="w-fit">
+                                {/* model x */}
+                                <div className="w-fit h-fit">
                                     <div>
-                                        <img src="/images/ms.jpg" width={150} height={150} alt="carImage"/>
+                                        <img src="/images/msbg.png" width={150} height={150} alt="carImage" className="cursor-pointer"/>
                                     </div>
 
-                                    <h1 className="text-center">Model S</h1>
-                                    <div className="flex gap-3 justify-center">
+                                    <h1 className="text-center pt-5 font-bold">Model X</h1>
+                                    <div className="flex gap-3 justify-center pt-3 text-[12px] text-neutral-700">
                                         <button><u>Learn</u></button>
                                         <button><u>Order</u></button>
                                     </div>
                                 </div>
 
-                                <div className="w-fit">
+                                {/* model y */}
+                                <div className="w-fit h-fit">
                                     <div>
-                                        <img src="/images/ms.jpg" width={150} height={150} alt="carImage"/>
+                                        <img src="/images/blue.png" width={150} height={150} alt="carImage" className="cursor-pointer"/>
                                     </div>
-
-                                    <h1 className="text-center">Model S</h1>
-                                    <div className="flex gap-3 justify-center">
+                                
+                                    <h1 className="text-center pt-5 font-bold">Model Y</h1>
+                                    <div className="flex gap-3 justify-center pt-3 text-[12px] text-neutral-700">
                                         <button><u>Learn</u></button>
                                         <button><u>Order</u></button>
                                     </div>
                                 </div>
 
-                                <div className="w-fit">
+                                {/* cybertruck */}
+                                <div className="w-fit h-fit">
                                     <div>
-                                        <img src="/images/ms.jpg" width={150} height={150} alt="carImage"/>
+                                        <img src="/images/cyber.png" width={150} height={150} alt="carImage" className="cursor-pointer"/>
                                     </div>
 
-                                    <h1 className="text-center">Model S</h1>
-                                    <div className="flex gap-3 justify-center">
+                                    <h1 className="text-center pt-5 font-bold">Model S</h1>
+                                    <div className="flex gap-3 justify-center pt-3 text-[12px] text-neutral-700">
                                         <button><u>Learn</u></button>
                                         <button><u>Order</u></button>
                                     </div>
                                 </div>
 
-                                <div className="w-fit">
+                                {/* help me choose */}
+                                <div className="w-fit h-fit">
                                     <div>
-                                        <img src="/images/ms.jpg" width={150} height={150} alt="carImage"/>
+                                        <img src="/images/black.png" width={150} height={150} alt="carImage" className="cursor-pointer"/>
                                     </div>
 
-                                    <h1 className="text-center">Model S</h1>
-                                    <div className="flex gap-3 justify-center">
-                                        <button><u>Learn</u></button>
-                                        <button><u>Order</u></button>
-                                    </div>
-                                </div>
-
-                                <div className="w-fit">
-                                    <div>
-                                        <img src="/images/ms.jpg" width={150} height={150} alt="carImage"/>
-                                    </div>
-
-                                    <h1 className="text-center">Model S</h1>
-                                    <div className="flex gap-3 justify-center">
-                                        <button><u>Learn</u></button>
-                                        <button><u>Order</u></button>
+                                    <h1 className="text-center pt-8 font-bold">Help Me Choose</h1>
+                                    <div className="flex gap-3 justify-center pt-3 text-[12px] text-neutral-700">
+                                        {/* <button><u>Learn</u></button> */}
+                                        <button><u>Get Started</u></button>
                                     </div>
                                 </div>
 
@@ -128,18 +134,18 @@ const Navbar=()=>{
                             </div>
 
 
-                            <div className="ml-auto">
-                                <ul className="border-l">
-                                    <li>Inventory</li>
-                                    <li>Used Cars</li>
-                                    <li>Demo Drive</li>
-                                    <li>Trade-in</li>
-                                    <li>Compare</li>
-                                    <li>Help Me Charge</li>
-                                    <li>Fleet</li>
-                                    <li>Semi</li>
-                                    <li>Roster</li>
-                                    <li>Federal Tax Credit</li>
+                            <div className="ml-auto py-[1rem]">
+                                <ul className="border-l px-5 flex flex-col gap-4 font-semibold text-[12px]">
+                                    <li className="cursor-pointer">Inventory</li>
+                                    <li className="cursor-pointer">Used Cars</li>
+                                    <li className="cursor-pointer">Demo Drive</li>
+                                    <li className="cursor-pointer">Trade-in</li>
+                                    <li className="cursor-pointer">Compare</li>
+                                    <li className="cursor-pointer">Help Me Charge</li>
+                                    <li className="cursor-pointer">Fleet</li>
+                                    <li className="cursor-pointer">Semi</li>
+                                    <li className="cursor-pointer">Roster</li>
+                                    <li className="cursor-pointer">Federal Tax Credit</li>
                                 </ul>
                             </div>
 
