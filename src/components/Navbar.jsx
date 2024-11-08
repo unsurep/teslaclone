@@ -79,22 +79,6 @@ const Navbar=()=>{
 
     
 
-
-  useEffect(() => {
-    if (typeof document !== 'undefined') {
-      // Code that uses document
-    }
-  }, []);
-
-
-
-
-
-
-
-
-
-
     return (
         
 
