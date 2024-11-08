@@ -1,28 +1,78 @@
 'use client'
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
-import Link from "next/link"
+
+
 import React, { useState } from "react"
-
 import { BsQuestionCircle } from "react-icons/bs";
 import { TbWorld } from "react-icons/tb";
 import { FaRegUserCircle } from "react-icons/fa";
-import { IoMenuSharp } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
-import { Image } from "next/image";
-import m3a from '../components/Images/m3a.jpg'
+import Image from 'next/image';
+
+
 
 const Navbar=()=>{
     const [showMenu, setShowMenu]=useState(false);
     const [showVehicle, setShowVehicle]=useState(false);
+    const [showEnergy, setShowEnergy]=useState(false);
+    const [showCharging, setShowCharging]=useState(false);
+    const [showDiscover, setShowDiscover]=useState(false);
+    const [showShop, setShowShop]=useState(false);
 
     const toggleShowMenu=()=>{
-        setShowMenu(!showMenu)
+        setShowMenu(!showMenu);
+    }
+
+    const toggleShowShop=()=>{
+        setShowShop(!showShop);
+        setShowVehicle(false);
+        setShowEnergy(false);
+        setShowCharging(false);
+        setShowDiscover(false);
+
+
+
+
+
+
     }
 
     const toggleShowVehicle=()=>{
         setShowVehicle(!showVehicle)
+        setShowEnergy(false)
+        setShowCharging(false)
+        setShowDiscover(false)
+        setShowShop(false)
         
+    }
+
+    const toggleShowEnergy=()=>{
+        setShowEnergy(!showEnergy)
+        setShowVehicle(false)
+        setShowCharging(false)
+        setShowDiscover(false)
+        setShowShop(false)
+    }
+
+    const toggleShowCharging=()=>{
+        setShowCharging(!showCharging)
+        setShowVehicle(false)
+        setShowEnergy(false)
+        setShowDiscover(false)
+        setShowShop(false)
+    }
+
+    const toggleShowDiscover=()=>{
+        setShowDiscover(!showDiscover)
+        setShowCharging(false)
+        setShowEnergy(false)
+        setShowVehicle(false)
+        setShowShop(false)
     }
 
 
@@ -34,11 +84,11 @@ const Navbar=()=>{
 
         <nav className="relative" >
             <div>
-                <p className="flex m-auto w-full items-center fixed z-50   justify-center text-#171a20 text-[10px] md:text-sm gap-3 pt-4 bg-gray-200 px-[1rem] ">0% APR avaliable for Model 3 and Model Y. <u>Learn More</u></p>
+                <p className="flex m-auto w-full items-center fixed z-50 p-5  justify-center text-#171a20 text-[10px] md:text-sm gap-3 pt-5 bg-gray-200 px-[1rem] ">0% APR avaliable for Model 3 and Model Y. <u>Learn More</u></p>
             </div>
 
             
-            <div className="flex justify-between items-center px-[1rem] md:px-[3rem] pt-[3.5rem] ">
+            <div className="flex justify-between items-center px-[1rem] md:px-[3rem] mt-[3.5rem] fixed z-50 shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] bg-white w-full p-6 bg-opacity-45 backdrop-blur-xl font-bold  ">
 
                 <div>
                     <img src='/images/logo.png ' width={120} height={120} alt="image"/>
@@ -46,10 +96,12 @@ const Navbar=()=>{
 
                 <div className=" relative">
                     <ul className="hidden lg:flex gap-5 text-sm flex-grow ">
-                        <li onClick={toggleShowVehicle} className="hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer">Vehicles</li>
-                        {/* drop down for vehicle */}
-
-                        {showVehicle===true ? <div className="bg-white h-[80vh] top-[6rem] left-0 absolute w-[50vw] flex py-[1rem] px-[1rem]">
+                         {/* drop down for vehicle */}
+                        <li onClick={toggleShowVehicle} className="hover:bg-black hover:text-white px-3 py-2 rounded-lg cursor-pointer">Vehicles</li>
+                        {showVehicle===true ? <div 
+                            data-aos="fade-left"
+                            data-aos-duration="1000" 
+                            className="bg-white bg-opacity-85 backdrop-blur-xl h-[60vh] top-[4rem] rounded-lg left-0 absolute w-[50vw] flex py-[1rem] px-[1rem]">
 
                             <div className="grid grid-cols-3 gap-2">
                                 {/* model s */}
@@ -58,7 +110,7 @@ const Navbar=()=>{
                                         <img src="/images/msbg.png" width={150} height={150} alt="carImage" className="cursor-pointer"/>
                                     </div>
 
-                                    <h1 className="text-center pt-5 font-bold">Model S</h1>
+                                    <h1 className="text-center mt-5 text-black font-bold hover:text-white hover:bg-black rounded-full cursor-pointer  w-fill">Model S</h1>
                                     <div className="flex gap-3 justify-center pt-3 text-[12px] text-neutral-700">
                                         <button><u>Learn</u></button>
                                         <button><u>Order</u></button>
@@ -71,7 +123,7 @@ const Navbar=()=>{
                                         <img src="/images/m3bg.png" width={150} height={150} alt="carImage" className="cursor-pointer"/>
                                     </div>
 
-                                    <h1 className="text-center  pt-5 font-bold">Model 3</h1>
+                                    <h1 className="text-center mt-5 text-black font-bold hover:text-white hover:bg-black rounded-full cursor-pointer  w-fill">Model 3</h1>
                                     <div className="flex gap-3 justify-center pt-3 text-[12px] text-neutral-700">
                                         <button><u>Learn</u></button>
                                         <button><u>Order</u></button>
@@ -84,7 +136,7 @@ const Navbar=()=>{
                                         <img src="/images/msbg.png" width={150} height={150} alt="carImage" className="cursor-pointer"/>
                                     </div>
 
-                                    <h1 className="text-center pt-5 font-bold">Model X</h1>
+                                    <h1 className="text-center mt-5 text-black font-bold hover:text-white hover:bg-black rounded-full cursor-pointer  w-fill">Model X</h1>
                                     <div className="flex gap-3 justify-center pt-3 text-[12px] text-neutral-700">
                                         <button><u>Learn</u></button>
                                         <button><u>Order</u></button>
@@ -97,7 +149,7 @@ const Navbar=()=>{
                                         <img src="/images/blue.png" width={150} height={150} alt="carImage" className="cursor-pointer"/>
                                     </div>
                                 
-                                    <h1 className="text-center pt-5 font-bold">Model Y</h1>
+                                    <h1 className="text-center mt-5 text-black font-bold hover:text-white hover:bg-black rounded-full cursor-pointer  w-fill">Model Y</h1>
                                     <div className="flex gap-3 justify-center pt-3 text-[12px] text-neutral-700">
                                         <button><u>Learn</u></button>
                                         <button><u>Order</u></button>
@@ -110,7 +162,7 @@ const Navbar=()=>{
                                         <img src="/images/cyber.png" width={150} height={150} alt="carImage" className="cursor-pointer"/>
                                     </div>
 
-                                    <h1 className="text-center pt-5 font-bold">Model S</h1>
+                                    <h1 className="text-center mt-5 text-black font-bold hover:text-white hover:bg-black rounded-full cursor-pointer  w-fill">Model S</h1>
                                     <div className="flex gap-3 justify-center pt-3 text-[12px] text-neutral-700">
                                         <button><u>Learn</u></button>
                                         <button><u>Order</u></button>
@@ -123,7 +175,7 @@ const Navbar=()=>{
                                         <img src="/images/black.png" width={150} height={150} alt="carImage" className="cursor-pointer"/>
                                     </div>
 
-                                    <h1 className="text-center pt-8 font-bold">Help Me Choose</h1>
+                                    <h1 className="text-center mt-8 text-black font-bold hover:text-white hover:bg-black rounded-full cursor-pointer  w-fill">Help Me Choose</h1>
                                     <div className="flex gap-3 justify-center pt-3 text-[12px] text-neutral-700">
                                         {/* <button><u>Learn</u></button> */}
                                         <button><u>Get Started</u></button>
@@ -135,7 +187,7 @@ const Navbar=()=>{
 
 
                             <div className="ml-auto py-[1rem]">
-                                <ul className="border-l px-5 flex flex-col gap-4 font-semibold text-[12px]">
+                                <ul className="border-l border-neutral-400 px-5 flex flex-col gap-4 font-semibold text-[10px]">
                                     <li className="cursor-pointer">Inventory</li>
                                     <li className="cursor-pointer">Used Cars</li>
                                     <li className="cursor-pointer">Demo Drive</li>
@@ -148,30 +200,261 @@ const Navbar=()=>{
                                     <li className="cursor-pointer">Federal Tax Credit</li>
                                 </ul>
                             </div>
-
-
-
-
-
-
-
-
                         </div> : '' }
 
+                        {/* drop down for energy */}
+                        <li onClick={toggleShowEnergy} className="hover:bg-black hover:text-white px-3 py-2 rounded-lg cursor-pointer">Energy</li>
+                        {showEnergy===true? <div 
+                            data-aos="fade-left"
+                            data-aos-duration="1000" 
+                            className="bg-white bg-opacity-85 backdrop-blur-xl h-[60vh] top-[4rem] rounded-lg left-0 absolute w-[50vw] flex py-[1rem] px-[1rem]">
+                            <div className="grid grid-cols-2 gap-2">
+
+                                {/* solar panel */}
+                                <div className="w-fit h-fit">
+                                    <div>
+                                        <img src="/images/sl1.png" width={200} height={200} alt="carImage" className="cursor-pointer"/>
+                                    </div>
+
+                                    <h1 className="text-center mt-5 text-black font-bold hover:text-white hover:bg-black rounded-full cursor-pointer  w-fill">Solar Panel</h1>
+                                    <div className="flex gap-3 justify-center pt-3 text-[12px] text-neutral-700">
+                                        <button><u>Learn</u></button>
+                                        <button><u>Order</u></button>
+                                    </div>
+                                </div>
+
+                                {/* solar roof */}
+                                <div className="w-fit h-fit">
+                                    <div>
+                                        <img src="/images/sl2.png" width={200} height={200} alt="carImage" className="cursor-pointer"/>
+                                    </div>
+
+                                    <h1 className="text-center mt-5 text-black font-bold hover:text-white hover:bg-black rounded-full cursor-pointer  w-fill">Solar Roof</h1>
+                                    <div className="flex gap-3 justify-center pt-3 text-[12px] text-neutral-700">
+                                        <button><u>Learn</u></button>
+                                        <button><u>Order</u></button>
+                                    </div>
+                                </div>
+
+                                {/* Powerwall */}
+                                <div className="w-fit h-fit ml-5">
+                                    <div className="ml-12">
+                                        <img src="/images/sl3.png" width={60} height={60} alt="carImage" className="cursor-pointer  "/>
+                                    </div>
+
+                                    <h1 className="text-center mt-5 text-black px-12 font-bold hover:text-white hover:bg-black rounded-full cursor-pointer  w-fill">Powerwall</h1>
+                                    <div className="flex gap-3 justify-center pt-3 text-[12px] text-neutral-700">
+                                        <button><u>Learn</u></button>
+                                        <button><u>Order</u></button>
+                                    </div>
+                                </div>
+
+                                {/* mega pack */}
+                                <div className="w-fit h-full pt-3">
+                                    <div className="">
+                                        <img src="/images/sl4.png" width={150} height={150} alt="carImage" className="cursor-pointer"/>
+                                    </div>
+
+                                    <h1 className="text-center mt-5 text-black px-12 font-bold hover:text-white hover:bg-black rounded-full cursor-pointer  w-fill">Megapack</h1>
+                                    <div className="flex gap-3 justify-center pt-3 text-[12px] text-neutral-700">
+                                        <button><u>Learn</u></button>
+                                        <button><u>Order</u></button>
+                                    </div>
+                                </div>
+                            </div>
 
 
-                        
+
+
+                            {/* inventory side */}
+                            <div className=" py-[1rem]">
+                                <ul className="border-l border-neutral-400 px-5 flex flex-col gap-4 font-semibold text-[10px]">
+                                    <li className="cursor-pointer">Schedule a Consultation</li>
+                                    <li className="cursor-pointer">Why Solar</li>
+                                    <li className="cursor-pointer">Incentive</li>
+                                    <li className="cursor-pointer">Support</li>
+                                    <li className="cursor-pointer">Compare</li>
+                                    <li className="cursor-pointer">Partner with Tesla</li>
+                                    <li className="cursor-pointer">Commercial</li>
+                                    <li className="cursor-pointer">Utilities</li>
+                                    
+                                </ul>
+                            </div>
 
 
 
 
 
 
-                        <li className="hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer">Energy</li>
-                        <li className="hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer">Charging</li>
-                        <li className="hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer">Discover</li>
-                        <li className="hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer">Shop</li>
-                        <li className="hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer">We, Robot</li>
+
+                        </div> : ""}
+
+                        {/* drop down for charging */}
+                        <li onClick={toggleShowCharging} className="hover:bg-black hover:text-white px-3 py-2 rounded-lg cursor-pointer">Charging</li>
+                        {showCharging===true? <div 
+                            data-aos="fade-left"
+                            data-aos-duration="1000" 
+                            className="bg-white bg-opacity-85 backdrop-blur-xl h-[60vh] top-[4rem] rounded-lg left-0 absolute w-[50vw] flex py-[1rem] px-[1rem]">
+                            <div className="flex gap-2 items-center justify-between px-10 w-full m-auto">
+                                {/* charging */}
+                                <div className="w-fit h-full">
+                                    <div>
+                                        <img src="/images/c1.png" width={100} height={100} alt="carImage" className="cursor-pointer"/>
+                                    </div>
+
+                                    <h1 className="text-center my-5 text-black font-bold hover:text-white hover:bg-black rounded-full cursor-pointer  w-fill mt-[4rem]">Charging</h1>
+                                    <div className="flex gap-3 justify-center pt-3 text-[12px] text-neutral-700">
+                                        <button><u>Learn</u></button>
+                                    </div>
+                                </div>
+
+                                {/* Home Charging */}
+                                <div className="w-fit h-fit">
+                                    <div className='items-center justify-center flex'>
+                                        <img src="/images/c2.png" width={100} height={100} alt="carImage" className="cursor-pointer"/>
+                                    </div>
+
+                                    <h1 className="text-center my-5 px-5 text-black font-bold hover:text-white hover:bg-black rounded-full cursor-pointer  w-fill">Home Charging</h1>
+                                    <div className="flex gap-3 justify-center pt-3 text-[12px] text-neutral-700">
+                                        <button><u>Learn</u></button>
+                                        <button><u>Shop</u></button>
+                                    </div>
+                                </div>
+
+                                {/* Supercharging */}
+                                <div className="w-fit h-fit ">
+                                    <div className='items-center justify-center flex'>
+                                        <img src="/images/c3.png" width={80} height={80} alt="carImage" className="cursor-pointer"/>
+                                    </div>
+
+                                    <h1 className="text-center my-5 px-5 mt-8 text-black font-bold hover:text-white hover:bg-black rounded-full cursor-pointer  w-fill">Supercharging</h1>
+                                    <div className="flex gap-3 justify-center pt-3 text-[12px] text-neutral-700">
+                                        <button><u>Learn</u></button>
+                                        <button><u>Find</u></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                             {/* inventory side */}
+                             <div className=" ml-auto py-[10px]">
+                                <ul className="border-l border-neutral-400 px-5 flex flex-col gap-2 font-semibold text-[10px]">
+                                    <li className="cursor-pointer">Help Me Charge</li>
+                                    <li className="cursor-pointer">Charging Caculator</li>
+                                    <li className="cursor-pointer">Charging With NACS</li>
+                                    <li className="cursor-pointer">Supercharger Voting</li>
+                                    <li className="cursor-pointer">Host a Supercharger</li>
+                                    <li className="cursor-pointer">Commercial Charging</li>
+                                    <li className="cursor-pointer">Host Wall Connectors</li>
+                                  
+                                    
+                                </ul>
+                            </div>
+
+
+
+
+
+
+
+
+                        </div> : ""}
+
+                        {/* discover dropdown */}
+                        <li onClick={toggleShowDiscover} className="hover:bg-black hover:text-white px-3 py-2 rounded-lg cursor-pointer">Discover</li>
+                        {showDiscover===true?<div 
+                            data-aos="fade-left"
+                            data-aos-duration="1000" 
+                            className="bg-white bg-opacity-85 backdrop-blur-xl h-[60vh] justify-center top-[4rem] rounded-lg left-0 absolute w-full flex py-[1rem] px-[1rem]">
+                                <div className='flex justify-between gap-8 font-semibold text-[12px]'> 
+                                    <ul className='flex flex-col gap-5'>
+                                        <li className='text-neutral-600'>Resources</li>
+                                        <li className='mt-5 cursor-pointer hover:underline'>Demo Drive</li>
+                                        <li className='cursor-pointer hover:underline'>Insurance</li>
+                                        <li className='cursor-pointer hover:underline'>Military Purchase Program</li>
+                                        <li className='cursor-pointer hover:underline'>Video Guides</li>
+                                        <li className='cursor-pointer hover:underline'>Customer Stories</li>
+                                        <li className='cursor-pointer hover:underline'>Events</li>
+                                    </ul>
+
+                                    <ul className='flex flex-col gap-5'>
+                                        <li className='text-neutral-600'>Location Services</li>
+                                        <li className='mt-5 cursor-pointer hover:underline'>Find Us</li>
+                                        <li className='cursor-pointer hover:underline'>Find a Collision Center</li>
+                                        <li className='cursor-pointer hover:underline'>Find a Certified Installer</li>
+                                    </ul>
+
+                                    <ul className='flex flex-col gap-5'>
+                                        <li className='text-neutral-600'>Company</li>
+                                        <li className='mt-5 cursor-pointer hover:underline'>About</li>
+                                        <li className='cursor-pointer hover:underline'>Careers</li>
+                                        <li className='cursor-pointer hover:underline'>Investor Relations</li>
+                                    </ul>
+                                </div>
+
+
+
+
+
+
+                            
+                        </div> : ""}
+
+
+                        {/* Shop dropdown */}
+                        <li onClick={toggleShowShop} className="hover:bg-black hover:text-white px-3 py-2 rounded-lg cursor-pointer ">Shop</li>
+                        {showShop===true? <div data-aos="fade-left"
+                            data-aos-duration="1000" 
+                            className="bg-white bg-opacity-85 backdrop-blur-xl h-[60vh] top-[4rem] rounded-lg left-0 absolute w-[50vw] flex py-[1rem] px-[1rem]">
+                                <div className='flex justify-center  w-full gap-5'>
+                                    {/* charging */}
+                                    <div>
+                                        <div>
+                                            <Image src="/images/c2.png" width={70} height={70} alt="image_charging" className="cursor-pointer m-auto"/>
+                                        </div>
+                                        <h1 className='mt-8 px-8 hover:bg-black hover:text-white cursor-pointer rounded-full text-sm'>Charging</h1>
+                                    </div>
+
+                                    {/* wheel */}
+                                    <div>
+                                        <div className=''>
+                                            <Image src="/images/v1.png" width={110} height={110} alt="image_charging" className="cursor-pointer m-auto "/>
+                                        </div>
+                                        <h1 className='mt-3 px-8 text-center hover:bg-black hover:text-white cursor-pointer rounded-full text-sm'>Vehicle Accessories</h1>
+                                    </div>
+
+                                    {/* cap */}
+                                    <div>
+                                        <div>
+                                            <Image src="/images/v2.png" width={150} height={150} alt="image_charging" className="cursor-pointer"/>
+                                        </div>
+                                        <h1 className='mt-12 px-8 hover:bg-black hover:text-white text-center cursor-pointer rounded-full text-sm'>Apparel</h1>
+                                    </div>
+
+                                    {/* bag */}
+                                    <div>
+                                        <div>
+                                            <Image src="/images/v3.png" width={90} height={90} alt="image_charging" className="cursor-pointer m-auto"/>
+                                        </div>
+                                        <h1  className='px-8 hover:bg-black hover:text-white cursor-pointer rounded-full text-sm'>Lifestyle</h1>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                        </div> : ""}
+
+
+
+
+
+                        <li className="hover:bg-black hover:text-white px-3 py-2 rounded-lg cursor-pointer">We, Robot</li>
                     </ul>
                 </div>
 
