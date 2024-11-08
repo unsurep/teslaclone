@@ -5,10 +5,10 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
 AOS.init();
 
+
+
+
 import { useEffect } from 'react';
-
-
-
 import React, { useState } from "react"
 import { BsQuestionCircle } from "react-icons/bs";
 import { TbWorld } from "react-icons/tb";
@@ -77,19 +77,18 @@ const Navbar=()=>{
         setShowShop(false)
     }
 
-    import { useEffect } from 'react';
+    
 
-function MyComponent() {
+
   useEffect(() => {
     if (typeof document !== 'undefined') {
       // Code that uses document
     }
   }, []);
 
-  return <div>My Component</div>;
-}
 
-export default MyComponent;
+
+
 
 
 
