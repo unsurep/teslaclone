@@ -1,12 +1,5 @@
 'use client'
 
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
-AOS.init();
-
-
-
 
 import { useEffect } from 'react';
 import React, { useState } from "react"
@@ -79,6 +72,15 @@ const Navbar=()=>{
 
     
 
+
+
+
+
+
+
+
+
+
     return (
         
 
@@ -98,10 +100,7 @@ const Navbar=()=>{
                     <ul className="hidden lg:flex gap-5 text-sm flex-grow ">
                          {/* drop down for vehicle */}
                         <li onClick={toggleShowVehicle} className="hover:bg-black hover:text-white px-3 py-2 rounded-lg cursor-pointer">Vehicles</li>
-                        {showVehicle===true ? <div 
-                            data-aos="fade-left"
-                            data-aos-duration="1000" 
-                            className="bg-white bg-opacity-85 backdrop-blur-xl h-[60vh] top-[4rem] rounded-lg left-0 absolute w-[50vw] flex py-[1rem] px-[1rem]">
+                        {showVehicle===true ? <div className="bg-white slide-left bg-opacity-85 backdrop-blur-xl h-[60vh] top-[4rem] rounded-lg left-0 absolute w-[50vw] flex py-[1rem] px-[1rem]">
 
                             <div className="grid grid-cols-3 gap-2">
                                 {/* model s */}
@@ -204,10 +203,7 @@ const Navbar=()=>{
 
                         {/* drop down for energy */}
                         <li onClick={toggleShowEnergy} className="hover:bg-black hover:text-white px-3 py-2 rounded-lg cursor-pointer">Energy</li>
-                        {showEnergy===true? <div 
-                            data-aos="fade-left"
-                            data-aos-duration="1000" 
-                            className="bg-white bg-opacity-85 backdrop-blur-xl h-[60vh] top-[4rem] rounded-lg left-0 absolute w-[50vw] flex py-[1rem] px-[1rem]">
+                        {showEnergy===true? <div className="bg-white slide-left bg-opacity-85 backdrop-blur-xl h-[60vh] top-[4rem] rounded-lg left-0 absolute w-[50vw] flex py-[1rem] px-[1rem]">
                             <div className="grid grid-cols-2 gap-2">
 
                                 {/* solar panel */}
@@ -291,10 +287,7 @@ const Navbar=()=>{
 
                         {/* drop down for charging */}
                         <li onClick={toggleShowCharging} className="hover:bg-black hover:text-white px-3 py-2 rounded-lg cursor-pointer">Charging</li>
-                        {showCharging===true? <div 
-                            data-aos="fade-left"
-                            data-aos-duration="1000" 
-                            className="bg-white bg-opacity-85 backdrop-blur-xl h-[60vh] top-[4rem] rounded-lg left-0 absolute w-[50vw] flex py-[1rem] px-[1rem]">
+                        {showCharging===true? <div className="bg-white slide-left bg-opacity-85 backdrop-blur-xl h-[60vh] top-[4rem] rounded-lg left-0 absolute w-[50vw] flex py-[1rem] px-[1rem]">
                             <div className="flex gap-2 items-center justify-between px-10 w-full m-auto">
                                 {/* charging */}
                                 <div className="w-fit h-full">
@@ -361,10 +354,7 @@ const Navbar=()=>{
 
                         {/* discover dropdown */}
                         <li onClick={toggleShowDiscover} className="hover:bg-black hover:text-white px-3 py-2 rounded-lg cursor-pointer">Discover</li>
-                        {showDiscover===true?<div 
-                            data-aos="fade-left"
-                            data-aos-duration="1000" 
-                            className="bg-white bg-opacity-85 backdrop-blur-xl h-[60vh] justify-center top-[4rem] rounded-lg left-0 absolute w-full flex py-[1rem] px-[1rem]">
+                        {showDiscover===true?<div className="bg-white slide-left bg-opacity-85 backdrop-blur-xl h-[60vh] justify-center top-[4rem] rounded-lg left-0 absolute w-full flex py-[1rem] px-[1rem]">
                                 <div className='flex justify-between gap-8 font-semibold text-[12px]'> 
                                     <ul className='flex flex-col gap-5'>
                                         <li className='text-neutral-600'>Resources</li>
@@ -402,9 +392,7 @@ const Navbar=()=>{
 
                         {/* Shop dropdown */}
                         <li onClick={toggleShowShop} className="hover:bg-black hover:text-white px-3 py-2 rounded-lg cursor-pointer ">Shop</li>
-                        {showShop===true? <div data-aos="fade-left"
-                            data-aos-duration="1000" 
-                            className="bg-white bg-opacity-85 backdrop-blur-xl h-[60vh] top-[4rem] rounded-lg left-0 absolute w-[50vw] flex py-[1rem] px-[1rem]">
+                        {showShop===true? <div className="bg-white slide-left bg-opacity-85 backdrop-blur-xl h-[60vh] top-[4rem] rounded-lg left-0 absolute w-[50vw] flex py-[1rem] px-[1rem]">
                                 <div className='flex justify-center  w-full gap-5'>
                                     {/* charging */}
                                     <div>
