@@ -8,6 +8,7 @@ import { TbWorld } from "react-icons/tb";
 import { FaRegUserCircle } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 
@@ -18,6 +19,7 @@ const Navbar=()=>{
     const [showCharging, setShowCharging]=useState(false);
     const [showDiscover, setShowDiscover]=useState(false);
     const [showShop, setShowShop]=useState(false);
+   
 
     const toggleShowMenu=()=>{
         setShowMenu(!showMenu);
@@ -29,12 +31,7 @@ const Navbar=()=>{
         setShowEnergy(false);
         setShowCharging(false);
         setShowDiscover(false);
-
-
-
-
-
-
+        setSignin(false)
     }
 
     const toggleShowVehicle=()=>{
@@ -42,8 +39,8 @@ const Navbar=()=>{
         setShowEnergy(false)
         setShowCharging(false)
         setShowDiscover(false)
-        setShowShop(false)
-        
+        setShowShop(false) 
+        setSignin(false) 
     }
 
     const toggleShowEnergy=()=>{
@@ -52,6 +49,7 @@ const Navbar=()=>{
         setShowCharging(false)
         setShowDiscover(false)
         setShowShop(false)
+        setSignin(false)
     }
 
     const toggleShowCharging=()=>{
@@ -60,6 +58,7 @@ const Navbar=()=>{
         setShowEnergy(false)
         setShowDiscover(false)
         setShowShop(false)
+        setSignin(false)
     }
 
     const toggleShowDiscover=()=>{
@@ -68,7 +67,10 @@ const Navbar=()=>{
         setShowEnergy(false)
         setShowVehicle(false)
         setShowShop(false)
+        setSignin(false)
     }
+
+   
 
     
 
@@ -92,9 +94,11 @@ const Navbar=()=>{
             
             <div className="flex justify-between items-center px-[1rem] md:px-[3rem] mt-[3.5rem] fixed z-50 shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] bg-white w-full p-6 bg-opacity-45 backdrop-blur-xl font-bold  ">
 
-                <div>
-                    <img src='/images/logo.png ' width={120} height={120} alt="image"/>
-                </div>
+                <Link href={'/'}>
+                    <div>
+                        <img src='/images/logo.png ' width={120} height={120} alt="image"/>
+                    </div>
+                </Link>
 
                 <div className=" relative">
                     <ul className="hidden lg:flex gap-5 text-sm flex-grow ">
@@ -447,9 +451,13 @@ const Navbar=()=>{
                 </div>
 
                 <div className="hidden lg:flex  text-xl ">
-                    <p className="hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer"><BsQuestionCircle /></p>
-                    <p className="hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer"><TbWorld /></p>
-                    <p className="hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer"><FaRegUserCircle /></p>
+                    <p className="hover:bg-black hover:text-white px-3 py-2 rounded-lg cursor-pointer"><BsQuestionCircle /></p>
+                    <p className="hover:bg-black hover:text-white px-3 py-2 rounded-lg cursor-pointer"><TbWorld /></p>
+
+                    <Link href={'/login'}>
+                        <p className="hover:bg-black hover:text-white px-3 py-2 rounded-lg cursor-pointer"><FaRegUserCircle /></p>
+                    </Link>
+
                 </div>
 
                 {/* toggle menu drop down */}
