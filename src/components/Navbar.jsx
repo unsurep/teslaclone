@@ -31,43 +31,43 @@ const Navbar=()=>{
         setShowEnergy(false);
         setShowCharging(false);
         setShowDiscover(false);
-        setSignin(false)
+        setSignin(false);
     }
 
     const toggleShowVehicle=()=>{
-        setShowVehicle(!showVehicle)
-        setShowEnergy(false)
-        setShowCharging(false)
-        setShowDiscover(false)
-        setShowShop(false) 
-        setSignin(false) 
+        setShowVehicle(!showVehicle);
+        setShowEnergy(false);
+        setShowCharging(false);
+        setShowDiscover(false);
+        setShowShop(false);
+        setSignin(false);
     }
 
     const toggleShowEnergy=()=>{
-        setShowEnergy(!showEnergy)
-        setShowVehicle(false)
-        setShowCharging(false)
-        setShowDiscover(false)
-        setShowShop(false)
-        setSignin(false)
+        setShowEnergy(!showEnergy);
+        setShowVehicle(false);
+        setShowCharging(false);
+        setShowDiscover(false);
+        setShowShop(false);
+        setSignin(false);
     }
 
     const toggleShowCharging=()=>{
-        setShowCharging(!showCharging)
-        setShowVehicle(false)
-        setShowEnergy(false)
-        setShowDiscover(false)
-        setShowShop(false)
-        setSignin(false)
+        setShowCharging(!showCharging);
+        setShowVehicle(false);
+        setShowEnergy(false);
+        setShowDiscover(false);
+        setShowShop(false);
+        setSignin(false);
     }
 
     const toggleShowDiscover=()=>{
-        setShowDiscover(!showDiscover)
-        setShowCharging(false)
-        setShowEnergy(false)
-        setShowVehicle(false)
-        setShowShop(false)
-        setSignin(false)
+        setShowDiscover(!showDiscover);
+        setShowCharging(false);
+        setShowEnergy(false);
+        setShowVehicle(false);
+        setShowShop(false);
+        setSignin(false);
     }
 
    
@@ -91,7 +91,7 @@ const Navbar=()=>{
                 <p className="flex m-auto w-full items-center fixed z-50 p-5  justify-center text-#171a20 text-[10px] md:text-sm gap-3 pt-5 bg-gray-200 px-[1rem] ">0% APR avaliable for Model 3 and Model Y. <u>Learn More</u></p>
             </div>
 
-            
+            {/* main navbar */}
             <div className="flex justify-between items-center px-[1rem] md:px-[3rem] mt-[3.5rem] fixed z-50 shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] bg-white w-full p-6 bg-opacity-45 backdrop-blur-xl font-bold  ">
 
                 <Link href={'/'}>
@@ -109,13 +109,19 @@ const Navbar=()=>{
                             <div className="grid grid-cols-3 gap-2">
                                 {/* model s */}
                                 <div className="w-fit h-fit">
-                                    <div>
-                                        <img src="/images/msbg.png" width={150} height={150} alt="carImage" className="cursor-pointer"/>
-                                    </div>
+                                    <Link href={'/vehicle'}>
+                                        <div>
+                                            <img src="/images/msbg.png" width={150} height={150} alt="carImage" className="cursor-pointer"/>
+                                        </div>
+                                    </Link>
 
-                                    <h1 className="text-center mt-5 text-black font-bold hover:text-white hover:bg-black rounded-full cursor-pointer  w-fill">Model S</h1>
+                                    <Link href={'/vehicle'}>
+                                        <h1 className="text-center mt-5 text-black font-bold hover:text-white hover:bg-black rounded-full cursor-pointer  w-fill">Model S</h1>
+                                    </Link>
                                     <div className="flex gap-3 justify-center pt-3 text-[12px] text-neutral-700">
-                                        <button><u>Learn</u></button>
+                                        <Link href={'/vehicle'}>
+                                            <button><u>Learn</u></button>
+                                        </Link>
                                         <button><u>Order</u></button>
                                     </div>
                                 </div>

@@ -1,10 +1,11 @@
-import Dashboard from "@/components/Dashboard/Dashboard";
+import Vehicle from "@/components/Vehicle/Vehicle";
+
 
 const Page=()=>{
     return(
         <>
             <div>
-               <Dashboard/>
+               <Vehicle/>
             </div>
         </>
     )
