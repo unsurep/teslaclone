@@ -1,22 +1,58 @@
-'use client'
+'use client';
 
 import Image from "next/image";
 import { TbWorld } from "react-icons/tb";
 import Link from "next/link";
+import { useState } from "react";
+import axios from "axios";
+import { useRouter } from "next/navigation";
 
+const Register = () => {
+    const router = useRouter();
 
-const Register=()=>{
-    return(
-        <div className="bg-cover bg-center bg-no-repeat h-screen shadow-lg shadow-orange-700  " style={{ backgroundImage: "url('/images/register.jpg')" }}>
+    const [region, setRegion] = useState('');
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
+
+    const submitHandler = async (e) => {
+        e.preventDefault();
+
+        // form validation
+        if (!region || !name || !email || !password) {
+            setError('Error! All fields are required.');
+            return;
+        }
+
+        setLoading(true);
+
+        // calling API now
+        try {
+            const res = await axios.post('http://localhost:3000/api/register', { region, name, email, password });
+            if (res.status === 401) {
+                setError('Unauthorized access');
+            } else if (res.status === 200) {
+                router.push('/login');
+            }
+            console.log(res);
+        } catch (error) {
+            setError(error.message);
+        }
+        setLoading(false);
+    };
+
+    return (
+        <div className="bg-cover bg-center bg-no-repeat h-screen shadow-lg shadow-orange-700" style={{ backgroundImage: "url('/images/register.jpg')" }}>
             {/* nav */}
-            <nav className="flex items-center px-[2rem] py-[1rem] bg-white bg-opacity-45 backdrop-blur-xl ">
-                
+            <nav className="flex items-center px-[2rem] py-[1rem] bg-white bg-opacity-45 backdrop-blur-xl">
                 <Link href={'/'}>
                     <div>
-                        <Image src="/images/logo.png" width={100} height={100} alt="tesla_logo " className="cursor-pointer"/>
+                        <Image src="/images/logo.png" width={100} height={100} alt="tesla_logo" className="cursor-pointer" />
                     </div>
                 </Link>
-
                 <div className="ml-auto flex items-center gap-2">
                     <p className="cursor-pointer"><TbWorld /></p>
                     <p className="cursor-pointer">en-US</p>
@@ -25,50 +61,44 @@ const Register=()=>{
 
             {/* Register Form */}
             <div className="flex flex-col w-fit m-auto pt-6 px-10 bg-white rounded-md mt-4 bg-opacity-15 backdrop-blur-sm">
-                <p className="text-sm text-white">Step 1 of 1</p>
-                <h1 className="font-bold text-2xl py-3">Create an Account</h1>
+                <h1 className="font-bold text-2xl pt-3">Create an Account</h1>
 
-                <form action="" className="">
+                <form onSubmit={submitHandler} className="">
+                    {error && (
+                        <div className="text-base font-semibold py-2 bg-red-500">
+                            <h1 className="text-white text-sm text-center rounded-full">{error}</h1>
+                        </div>
+                    )}
                     <div className="flex flex-col gap-1">
-                        <label className="text-white font-semibold" htmlFor="">Region</label>
-                        <select className="w-fill bg-slate-200 text-sm text-zinc-600 p-2 border border-black border-solid rounded-md outline-none" name="" id="">
-                            <option className="" value="">Select Region</option>
-                            <option value="">Canada</option>
-                            <option value="">United States</option>
-                            <option value="">United Kingdom</option>
-                            <option value="">Port Harcourt</option>
+                        <label className="text-white font-semibold" htmlFor="region">Region</label>
+                        <select onChange={(e) => setRegion(e.target.value)} className="w-full bg-slate-200 text-sm text-zinc-600 p-2 border border-black rounded-md outline-none" id="region">
+                            <option value="">Select Region</option>
+                            <option value="canada">Canada</option>
+                            <option value="united states">United States</option>
+                            <option value="united kingdom">United Kingdom</option>
+                            <option value="port harcourt">Port Harcourt</option>
                         </select>
                     </div>
 
                     <div className="flex flex-col gap-1 py-3">
-                        <label className="text-white font-semibold" htmlFor="">Name</label>
-                        <input type="text"
-                        placeholder="Enter name"
-                        className="w-fill p-2 border text-sm border-black border-solid rounded-md outline-none"
-                        // required
-                        />
+                        <label className="text-white font-semibold" htmlFor="name">Name</label>
+                        <input onChange={(e) => setName(e.target.value)} type="text" placeholder="Enter name" className="w-full p-2 border text-sm border-black rounded-md outline-none" />
                     </div>
 
                     <div className="flex flex-col gap-1">
-                        <label className="text-white font-semibold" htmlFor="">Email</label>
-                        <input type="email"
-                        placeholder="@"
-                        className="w-fill p-2 text-sm border border-black border-solid rounded-md outline-none"
-                        // required
-                        />
+                        <label className="text-white font-semibold" htmlFor="email">Email</label>
+                        <input onChange={(e) => setEmail(e.target.value)} type="email" placeholder="@" className="w-full p-2 text-sm border border-black rounded-md outline-none" />
                     </div>
 
                     <div className="flex flex-col gap-1 pt-3">
-                        <label className="text-white font-semibold" htmlFor="">Password</label>
-                        <input type="password"
-                        placeholder="*********"
-                        className="w-fill p-2 text-sm border border-black border-solid rounded-md outline-none"
-                        // required
-                        />
+                        <label className="text-white font-semibold" htmlFor="password">Password</label>
+                        <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder="*********" className="w-full p-2 text-sm border border-black rounded-md outline-none" />
                     </div>
 
-                    <div className="mt-8 ">
-                        <button className="bg-blue-500 text-white w-full py-2 rounded-md">Next</button>
+                    <div className="mt-8">
+                        <button type="submit" className="bg-blue-500 text-white w-full py-2 rounded-md">
+                            {loading ? "Loading..." : 'Next'}
+                        </button>
                     </div>
                 </form>
 
@@ -77,14 +107,9 @@ const Register=()=>{
                     <li className="cursor-pointer hover:bg-black hover:text-white py-1 px-3 rounded-lg">Privacy & Legal</li>
                     <li className="cursor-pointer hover:bg-black hover:text-white py-1 px-3 rounded-lg">Contact</li>
                 </ul>
-
             </div>
         </div>
-    )
-
-
-
-
+    );
 };
 
 export default Register;
