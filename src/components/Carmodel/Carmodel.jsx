@@ -895,7 +895,7 @@ const Carmodel = () => {
               <p className=" text-sm">Model S platforms unite powertrain and battery technologies for unrivaled performance, range <br /> and efficiency. New module and pack thermal architecture allows faster charging and gives you more power <br /> and endurance in all conditions.</p>
             </div>
 
-            <div className="flex m-auto justify-center  mt-16 mx-[3rem] bg-white pt-28">
+            <div className="flex m-auto justify-center  mt-16 mx-[3rem] bg-white py-20">
               <Image src="/images/eng1.png" width={700} height={700} alt="image_powertrain" className="mx-[20rem]"/>
             </div>
           </div>
@@ -955,9 +955,65 @@ const Carmodel = () => {
           </div>
 
           {/* red tesla areodynamic */}
-          <div className="bg-cover bg-center bg-no-repeat h-[70vh]  " style={{ backgroundImage: "url('/images/msbb.png')" }}>
+          <div className="bg-cover bg-center bg-no-repeat h-[70vh]  " style={{ backgroundImage: "url('/images/msbb.png')" }}></div>
 
+          {/* designed for efficiency */}
+          <div className="flex px-[8rem] py-[3rem] gap-10 bg-black">
+            <div className="flex flex-col gap-4">
+              <h2 className="text-sm font-semibold text-white ">Plaid</h2>
+              <h1 className="font-bold text-white text-xl">Beyond Ludicrous</h1>
+               <div className="flex flex-col gap-5">
+                <button className=" ring ring-white py-1 px-8 text-base font-semibold text-white ">Order Now</button>
+                <button className=" py-2 px-8 bg-neutral-600 text-base font-semibold text-white">Demo Drive</button>
+               </div>
+
+            </div>
+
+
+
+            <div className=" text-sm ml-auto  text-white  ">
+              <p>Model S Plaid has the quickest acceleration of any vehicle in production. <br /> Updated battery  architecture for all Model S trims enables back-to-back <br /> track runs without performance  degradation. <u className="cursor-pointer">Chat with a Tesla Advisor</u> <br /> to learn more about Model S or <u className="cursor-pointer">schedule a demo driv</u>e today.</p>
+            </div>
           </div>
+
+          {/* black & red 1 */}
+          <div className="flex bg-black text-white pt-28 px-[8rem]">
+            <div className="flex flex-col justify-center pr-12">
+              <h3 className="text-sm pb-4">Relentless Performance</h3>
+              <p className="text-sm">Staggered, performance wheels and tires keep the vehicle <br /> planted and help transfer maximum power down to the road.</p>
+            </div>
+
+            <div>
+            <Image src="/images/teslamodelsv.jpg" width={400} height={400} alt="tesla_image"/>
+            </div>
+          </div>
+
+          {/* black & red 2 */}
+          <div className="flex bg-black text-white  px-[8rem]">
+
+            <div>
+              <Image src="/images/models77b.jpg" width={400} height={400} alt="tesla_image"/>
+            </div>
+
+            <div className="flex flex-col justify-center pl-12">
+              <h3 className="text-sm pb-4">Optimized Aerodynamics</h3>
+              <p className="text-sm">Attention to detail on all exterior surfaces makes Model S the most <br /> aerodynamic production car on Earth.</p>
+            </div>
+          </div>
+
+          {/* black & red 3 */}
+          <div className="flex bg-black text-white pt-28 px-[8rem]">
+            <div className="flex flex-col justify-center pr-12">
+              <h3 className="text-sm pb-4">Refined Styling</h3>
+              <p className="text-sm">An iconic silhouette meets refreshed, elegant proportions.</p>
+            </div>
+
+            <div>
+              <Image src="/images/models77.jpg" width={400} height={400} alt="tesla_image"/>
+            </div>
+          </div>
+
+          
 
           
 
