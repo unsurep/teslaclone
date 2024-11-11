@@ -109,17 +109,17 @@ const Navbar=()=>{
                             <div className="grid grid-cols-3 gap-2">
                                 {/* model s */}
                                 <div className="w-fit h-fit">
-                                    <Link href={'/vehicle'}>
+                                    <Link href={'/carmodel'}>
                                         <div>
                                             <img src="/images/msbg.png" width={150} height={150} alt="carImage" className="cursor-pointer"/>
                                         </div>
                                     </Link>
 
-                                    <Link href={'/vehicle'}>
+                                    <Link href={'/carmodel'}>
                                         <h1 className="text-center mt-5 text-black font-bold hover:text-white hover:bg-black rounded-full cursor-pointer  w-fill">Model S</h1>
                                     </Link>
                                     <div className="flex gap-3 justify-center pt-3 text-[12px] text-neutral-700">
-                                        <Link href={'/vehicle'}>
+                                        <Link href={'/carmodel'}>
                                             <button><u>Learn</u></button>
                                         </Link>
                                         <button><u>Order</u></button>

@@ -26,7 +26,7 @@ const Login=()=>{
 
             {/* Sign In */}
             <div className="flex flex-col w-fit m-auto pt-12 px-10 bg-white rounded-md mt-4 bg-opacity-15 backdrop-blur-sm">
-                <h1 className="text-3xl text-zinc-900">Sign In</h1>
+                <h1 className="text-3xl  text-white">Sign In</h1>
                 
                 <form action="">
                     <div className="flex flex-col gap-1 py-3">
@@ -49,7 +49,7 @@ const Login=()=>{
                         <button className="bg-blue-500 text-white w-full py-2 rounded-md">Submit</button>
                     </div>
 
-                    <p className="mt-5 text-center text-neutral-900 text-base"><i>Or</i></p>
+                    <p className="mt-5 text-center  text-base text-white"><i>Or</i></p>
 
                     <Link href={'/register'}>
                         <div className="mt-5">

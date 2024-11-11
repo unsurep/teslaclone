@@ -65,33 +65,7 @@ body {
   }
 }
 
-.loader {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  display: block;
-  margin:15px auto;
-  position: relative;
-  background: #FFF;
-  box-shadow: -24px 0 #FFF, 24px 0 #FFF;
-  box-sizing: border-box;
-  animation: shadowPulse 2s linear infinite;
-}
 
-@keyframes shadowPulse {
-  33% {
-    background: #FFF;
-    box-shadow: -24px 0 #FF3D00, 24px 0 #FFF;
-  }
-  66% {
-    background: #FF3D00;
-    box-shadow: -24px 0 #FFF, 24px 0 #FFF;
-  }
-  100% {
-    background: #FFF;
-    box-shadow: -24px 0 #FFF, 24px 0 #FF3D00;
-  }
-}
 
   .wobble-hor-bottom {
     -webkit-animation: wobble-hor-bottom 0.8s both;
@@ -168,6 +142,30 @@ body {
             transform: translateX(-6px) rotate(-1.2deg);
   }
 }
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  height: calc((100% - 30px) / 2) !important;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
 
 
 
