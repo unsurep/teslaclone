@@ -838,12 +838,12 @@ const Carmodel = () => {
           </div>
 
 
-          {/* sport div red */}
-          <div className="bg-cover bg-center bg-no-repeat h-screen  " style={{ backgroundImage: "url('/images/msb.png')" }}>
+          {/* sport div blue */}
+          <div className="bg-cover bg-center bg-no-repeat h-[60vh]  " style={{ backgroundImage: "url('/images/teslab.jpg')" }}>
           <div className="flex flex-col m-auto justify-center text-center pt-20">
                 
 
-                <ul className="flex m-auto justify-center text-xl text-white font-bold mt-[24rem] gap-[5rem]">
+                <ul className="flex m-auto justify-center text-xl text-white font-bold mt-[10rem] gap-[5rem]">
                     <li>348 mi</li>
                     <li>1.99s</li>
                     <li>200 mph</li>
@@ -869,8 +869,94 @@ const Carmodel = () => {
           </div>
 
           {/* lorem div */}
-          <div>
-            
+          <div className="flex px-[8rem] py-[3rem] gap-10 ">
+            <div className="flex flex-col gap-4">
+              <h2 className="text-sm font-semibold">Plaid</h2>
+              <h1 className="font-bold text-black text-xl">Beyond Ludicrous</h1>
+               <div className="flex flex-col gap-5">
+                <button className=" ring ring-black py-1 px-8 font-semi-bold ">Order Now</button>
+                <button className=" py-2 px-8 bg-neutral-200 font-semibold">Compare Models</button>
+               </div>
+
+            </div>
+
+
+
+            <div className=" text-sm ml-auto flex items-center  ">
+              <p>Model S Plaid has the quickest acceleration of any vehicle in production. <br /> Updated battery  architecture for all Model S trims enables back-to-back <br /> track runs without performance  degradation. <u className="cursor-pointer">Chat with a Tesla Advisor</u> <br /> to learn more about Model S or <u className="cursor-pointer">schedule a demo driv</u>e today.</p>
+            </div>
+          </div>
+
+
+          {/* Electric Powertrain */}
+          <div className="bg-neutral-200">
+            <div className="w-fit mx-[8rem] pt-32 ">
+              <h1 className="mb-8 text-xl font-bold">Electric Powertrain</h1>
+              <p className=" text-sm">Model S platforms unite powertrain and battery technologies for unrivaled performance, range <br /> and efficiency. New module and pack thermal architecture allows faster charging and gives you more power <br /> and endurance in all conditions.</p>
+            </div>
+
+            <div className="flex m-auto justify-center  mt-16 mx-[3rem] bg-white pt-28">
+              <Image src="/images/eng1.png" width={700} height={700} alt="image_powertrain" className="mx-[20rem]"/>
+            </div>
+          </div>
+
+          {/* Model S / Model S Plaid */}
+
+          <div className="flex bg-neutral-200 w-full px-[8rem] gap-20 pt-12 pb-20 ">
+         
+            {/* div A */}
+            <div className=" cursor-pointer text-neutral-600 hover:text-black ">
+              <h1 className=" font-bold">Model S</h1>
+              <p className="text-sm py-3 ">Dual Motor All-Wheel Drive unlocks more range than any other <br /> vehicle in  our current lineup, with insane power and maxiumu control.</p>
+
+              <div className="flex gap-5 font-bold ">
+                <div className="">
+                  <h1 className="text-lg">3.1 s</h1>
+                  <p  className="text-[12px]">0-60 mph</p>
+                </div>
+
+                <div className="">
+                  <h1 className="text-lg">402 mi</h1>
+                  <p className="text-[12px]">Range (EPA est.)</p>
+                </div>
+
+                <div className="">
+                  <h1 className="text-lg">670 hp</h1>
+                  <p className="text-[12px]">Peak Power</p>
+                </div>
+
+              </div>
+            </div>
+
+
+
+            {/* div B */}
+            <div className="text-neutral-600 hover:text-black cursor-pointer">
+              <h1 className=" font-bold">Model S Plaid</h1>
+              <p className="text-sm py-3">Maintain 1,000+ horsepower all the way to 200 mph with Tri-Motor All-Wheel <br /> Drive, featuring torque vectoring and three independent carbon-sleeved rotors.</p>
+
+              <div className="flex gap-5 font-bold">
+                <div>
+                  <h1 className="text-lg">1.99 s</h1>
+                  <p className="text-[12px]">0-60 mph <sup>s</sup></p>
+                </div>
+
+                <div>
+                  <h1 className="text-lg">348 mi</h1>
+                  <p className="text-[12px]">Range (EPA est.)</p>
+                </div>
+
+                <div>
+                  <h1 className="text-lg">1,020 hp</h1>
+                  <p className="text-[12px]">Peak Power</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* red tesla areodynamic */}
+          <div className="bg-cover bg-center bg-no-repeat h-[70vh]  " style={{ backgroundImage: "url('/images/msbb.png')" }}>
+
           </div>
 
           
