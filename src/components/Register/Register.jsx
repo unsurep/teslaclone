@@ -50,7 +50,7 @@ const Register = () => {
             <nav className="flex items-center px-[2rem] py-[1rem] bg-white bg-opacity-45 backdrop-blur-xl">
                 <Link href={'/'}>
                     <div>
-                        <Image src="/images/logo.png" width={100} height={100} alt="tesla_logo" className="cursor-pointer" />
+                        <Image src="/images/logo.png" width={10} height={10} alt="tesla_logo" className="cursor-pointer" />
                     </div>
                 </Link>
                 <div className="ml-auto flex items-center gap-2">

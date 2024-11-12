@@ -9,11 +9,12 @@ import { FaRegUserCircle } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import Image from 'next/image';
 import Link from 'next/link';
+import { IoMenu } from "react-icons/io5";
 
 
 
 const Navbar=()=>{
-    const [showMenu, setShowMenu]=useState(false);
+    const [showMenu, setShowMenu]=useState(true);
     const [showVehicle, setShowVehicle]=useState(false);
     const [showEnergy, setShowEnergy]=useState(false);
     const [showCharging, setShowCharging]=useState(false);
@@ -70,6 +71,16 @@ const Navbar=()=>{
         setSignin(false);
     }
 
+
+    // onclick function for mobile screens
+
+    // const [vehicle, setVehicle]=useState(false);
+
+    
+    //  const toggleVehicle=()=>{
+    //     setVehicle(!false);
+    //  }
+
    
 
     
@@ -92,13 +103,45 @@ const Navbar=()=>{
             </div>
 
             {/* main navbar */}
-            <div className="flex justify-between items-center px-[1rem] md:px-[3rem] mt-[3.5rem] fixed z-50 shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] bg-white w-full p-6 bg-opacity-45 backdrop-blur-xl font-bold  ">
+            <div className="flex justify-between items-center px-[1rem] md:px-[3rem] mt-[3rem] fixed z-50 shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] bg-white w-full p-6 bg-opacity-45 backdrop-blur-xl font-bold  ">
 
-                <Link href={'/'}>
-                    <div>
-                        <img src='/images/logo.png ' width={120} height={120} alt="image"/>
+               <div className='flex items-center w-full lg:w-fit'>
+                    <Link href={'/'}>
+                        <Image src="/images/logo.png" width={100} height={100} alt='tesla_logo' className='w-fit'/>
+                    </Link>
+                    
+                    <div onClick={toggleShowMenu} className='ml-auto text-2xl flex lg:hidden '>
+                        {showMenu===true? <div className='text-2xl   w-fit'><IoMdClose/>
+                        <div className='absolute top-[4.5rem] right-0 text-base bg-white h-screen w-full py-3   '>
+                            <ul className='flex flex-col gap-3 items-center'>
+                                <Link href={'/'}>
+                                    <li className='underline'>Home</li>
+                                </Link>
+                                <li>Vehicle</li>
+                                <li>Energy</li>
+                                <li>Charging</li>
+                                <li>Discover</li>
+                                <li>Shop</li>
+                                <li>We, Robot</li>
+                                <li>Support</li>
+                                <li>Country</li>
+                                <li>Account</li>
+                            </ul>
+                            
+                        </div>
+                        
+                        
+                        </div> : <div className='text-2xl  w-fit'><IoMenu /></div>}
+                        
+                        {/* <IoMdClose/>
+                        <IoMenu /> */}
+
                     </div>
-                </Link>
+                    
+               </div>
+               
+               
+                
 
                 <div className=" relative">
                     <ul className="hidden lg:flex gap-5 text-sm flex-grow ">
@@ -466,15 +509,33 @@ const Navbar=()=>{
 
                 </div>
 
-                {/* toggle menu drop down */}
-                <div onClick={toggleShowMenu} className="lg:hidden ">
+                {/* toggle menu drop down for phone screen */}
+                {/* <div onClick={toggleShowMenu} className="lg:hidden ">
                     {showMenu===true?
                     
-                    <div className="text-2xl hover:bg-neutral-300 text-black rounded-full p-1"><IoMdClose />
-                    <div className="absolute left-0 top-[7rem] h-screen w-[100vw] bg-white ">
-                        <ul className="flex flex-col gap-2 text-center text-base">
-                            <li className="hover:text-blue-600 cursor-pointer font-bold"><u>Home</u></li>
-                            <li>Vehicle</li>
+                    <div className="text-2xl bg-neutral-300 text-black p-1 rounded-full "><IoMdClose />
+                    <div className="absolute left-0 top-[4rem] h-screen w-[100vw] bg-neutral-200 ">
+                        <ul className="flex flex-col gap-4 text-center py-5 text-base">
+                            <Link href={'/'}>
+                                <li className="hover:text-blue-600 cursor-pointer font-bold"><u>Home</u></li>
+                            </Link>
+                            <li onClick={toggleVehicle}>Vehicle
+                                {vehicle===true? <div className='bg-red-500'>vehicle is true</div> : <div></div>}
+
+                                
+
+
+
+
+
+
+
+
+                            </li>
+
+
+
+
                             <li>Energy</li>
                             <li>Charging</li>
                             <li>Discover</li>
@@ -486,7 +547,7 @@ const Navbar=()=>{
                         </ul>
                     </div></div> :  <p  className="px-4 py-1 bg-neutral-300 rounded-[6px] font-semibold cursor pointer text-sm;">Menu</p> }
                 
-                </div>
+                </div> */}
 
 
 
