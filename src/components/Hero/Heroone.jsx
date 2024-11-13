@@ -46,7 +46,7 @@ const Heroone=()=>{
 
             {/* Model X */}
             <div className="bg-cover bg-center bg-no-repeat h-screen   " style={{ backgroundImage: "url('/images/xxx.jpg')" }}>
-                <div className=" items-center flex flex-col w-full pt-2">
+                <div className=" items-center flex flex-col w-full pt-1">
                     <div className="flex flex-col items-center gap-3">
                         <p className="text-[3rem] md lg:text-[4rem] text-white font-extrabold">Model X</p>
                         <p className="text-[2rem] lg:text-[rem] text-white font-extrabold">From $65,990</p>
@@ -63,16 +63,16 @@ const Heroone=()=>{
             </div>
 
             {/* Model S */}
-            <div className="bg-cover bg-center bg-no-repeat h-screen rounded-lg mx-[1rem] md:mx-[2rem] lg:mx-[3rem] mt-[2rem] " style={{ backgroundImage: "url('/images/ms.jpg')" }}>
-                <div className=" items-center flex flex-col w-full pt-5">
+            <div className="bg-cover bg-center bg-no-repeat h-screen " style={{ backgroundImage: "url('/images/ms.jpg')" }}>
+                <div className=" items-center flex flex-col w-full pt-1">
                     <div className="flex flex-col items-center gap-3">
-                        <p className="text-[2rem] lg:text-[3rem] text-neutral-500 font-bold ">Model S</p>
-                        <p className="text-sm lg:text-[1rem] text-black font-bold">From $68,490</p>
-                        <u className="text-sm lg:text-[1rem] text-black font-bold">After Est. Gas Saving $6,500</u>
+                        <p className="text-[3rem] md lg:text-[4rem] text-white font-extrabold">Model S</p>
+                        <p className="text-[2rem] md:text-[2rem] lg:text-[rem] text-white font-extrabold">From $68,490</p>
+                        <u className="text-sm lg:text-[1rem] text-white font-bold">After Est. Gas Saving $6,500</u>
                     </div>
 
 
-                    <div className="md:pt-[20rem] lg:pt-[21rem] xl:pt-[26rem] pt-72 md:block  gap-2  m-auto flex flex-col">
+                    <div className="md:pt-[20rem] lg:pt-[29rem] xl:pt-[23rem] pt-[16rem] md:block  gap-2  m-auto flex flex-col">
                         <button className="bg-blue-600 text-white font-semibold mt-2 text-[10px] py-2 px-16 rounded-[8px] ml-6">Order Now</button>
                         <button className="bg-white text-neutral-600 mt-2 font-semibold text-[10px] py-2 px-16 rounded-[8px] ml-6">Demo Drive</button>
                     </div>
@@ -80,32 +80,31 @@ const Heroone=()=>{
             </div>
 
             {/* Cyber Truck */}
-            <div className="bg-cover bg-center bg-no-repeat h-screen rounded-lg mx-[1rem] md:mx-[2rem] lg:mx-[3rem] mt-[2rem] " style={{ backgroundImage: "url('/images/ct.jpg')" }}>
-                <div className=" items-center flex flex-col w-full pt-5">
+            <div className="bg-cover bg-center bg-no-repeat h-screen" style={{ backgroundImage: "url('/images/ct.jpg')" }}>
+                <div className=" items-center flex flex-col w-full pt-3">
                     <div className="pt-8">
-                        <img src="/images/cyberbg.png" width={300} height={300} alt="image"/>
-                        {/* <p className="text-sm lg:text-[1rem] text-black font-bold">From $68,490</p>
-                        <u className="text-sm lg:text-[1rem] text-black font-bold">After Est. Gas Saving $6,500</u> */}
+                        <img src="/images/cyberbg.png" width={300} height={300} alt="image_tesla"/>
+
                     </div>
 
 
-                    <div className="md:pt-[20rem] lg:pt-[21rem] xl:pt-[26rem] pt-72 md:block  gap-2  m-auto flex flex-col">
-                        <button className="bg-zinc-900 text-neutral-400 font-semibold mt-2 text-[10px] py-2 px-16  ml-6">Order Now</button>
-                        <button className="bg-zinc-900 text-neutral-400 mt-2 font-semibold text-[10px] py-2 px-16  ml-6">Demo Drive</button>
+                    <div className="md:pt-[20rem] lg:pt-[32rem] xl:pt-[26rem] pt-64 md:block  gap-2  m-auto flex flex-col">
+                        <button className="bg-zinc-950 text-neutral-400 font-semibold mt-2 text-[10px] py-2 px-16  ml-6">Order Now</button>
+                        <button className="bg-zinc-950 text-neutral-400 mt-2 font-semibold text-[10px] py-2 px-16  ml-6">Demo Drive</button>
                     </div>
                 </div>
             </div>
             
             {/* solar panel A & B */}
-            <div className="md:flex  mt-[2rem] " >
+            <div className="w-full" >
                 {/* solar panel A */}
-                <div className="bg-cover bg-center bg-no-repeat   rounded-lg mx-[1rem] md:mx-[2rem] lg:mx-[3rem] md:w-[60vw] mt-[2rem] " style={{ backgroundImage: "url('/images/roof1.jpg')" }}>
-                    <div className="flex flex-col items-center pt-16">
-                        <h1 className="text-[2rem] lg:text-[3rem] text-neutral-500 font-bold">Solar Panels</h1>
-                        <p className="underline text-sm lg:text-[1rem] text-white font-bold">Schedule a Virtual Consultation</p>
+                <div className="bg-cover bg-center bg-no-repeat w-full " style={{ backgroundImage: "url('/images/roof1.jpg')" }}>
+                    <div className="flex flex-col items-center pt-2">
+                        <h1 className="text-[2rem] lg:text-[3rem] text-neutral-500 font-bold">Solar Roof</h1>
+                        <p className="text-sm lg:text-[1rem] text-white font-bold">Produce Clean Energy From Your Roof</p>
                     </div>
 
-                    <div className="pt-[18rem] flex flex-col items-center pb-3">
+                    <div className="pt-[18rem] flex flex-col items-center pb-3 ">
                         <button className="bg-blue-600 text-white font-semibold mt-2 text-[10px] py-2 px-16 rounded-[8px] ml-6">Order Now</button>
                         <button className="bg-white text-neutral-600 mt-2 font-semibold text-[10px] py-2 px-16 rounded-[8px] ml-6">Learn More</button>
                     </div>
@@ -114,8 +113,8 @@ const Heroone=()=>{
 
 
                 {/* Solar panel B */}
-                <div className="bg-cover bg-center bg-no-repeat rounded-lg mx-[1rem] md:mx-[2rem] lg:mx-[3rem] md:w-[60vw] mt-[2rem] " style={{ backgroundImage: "url('/images/roof2.jpg')" }}>
-                    <div className="flex flex-col items-center pt-16">
+                <div className="bg-cover bg-center bg-no-repeat w-full " style={{ backgroundImage: "url('/images/roof2.jpg')" }}>
+                    <div className="flex flex-col items-center pt-2">
                         <h1 className="text-[2rem] lg:text-[3rem] text-neutral-500 font-bold">Solar Roof</h1>
                         <p className="text-sm lg:text-[1rem] text-white font-bold">Produce Clean Energy From Your Roof</p>
                     </div>
