@@ -8,9 +8,9 @@ const Heroone=()=>{
     return(
         <main>
            {/* Model Y */}
-            <div className="bg-cover bg-center bg-no-repeat h-[90vh]    pt-32 md:pt-36 " style={{ backgroundImage: "url('/images/x1.jpg')" }}>
-                <div className=" items-center flex flex-col w-full ">
-                    <div className="flex flex-col items-center gap-1">
+            <div className="bg-cover bg-center bg-no-repeat h-[100vh] pt-32 md:pt-36" style={{ backgroundImage: "url('/images/x1.jpg')" }}>
+                <div className="flex flex-col items-center justify-center w-full">
+                    <div className="flex flex-col items-center gap-1 w-full">
                         <p className="text-[3rem] lg:text-[4rem] text-white font-extrabold ">Model Y</p>
                         <u className="text-[2rem] lg:text-[1rem] md:hidden text-white font-bold">0% ARP <br /> Avaliable</u>
                         <u className="text-[2rem] lg:text-[2rem] hidden md:block text-white font-bold">0% ARP  Avaliable</u>
@@ -18,18 +18,18 @@ const Heroone=()=>{
                     </div>
 
 
-                    <div className="pt-[3rem] md:pt-[8rem] lg:pt-[17rem] xl:pt-[11rem] h-[50vh] md:block  gap-2  m-auto flex flex-col">
-                        <button className="bg-blue-600 text-white font-semibold mt-2 text-[10px] py-2 px-16 rounded-[8px] ml-6">Order Now</button>
-                        <button className="bg-white text-neutral-600 mt-2 font-semibold text-[10px] py-2 px-16 rounded-[8px] ml-6">Demo Drive</button>
+                    <div className="pt-[3rem] md:pt-[8rem] lg:pt-[17rem] xl:pt-[11rem] justify-center gap-4 flex w-full items-center">
+                        <button className="bg-blue-600 text-white font-semibold  text-[10px] py-2 px-8 rounded-[8px] ">Order Now</button>
+                        <button className="bg-white text-neutral-600 font-semibold text-[10px] py-2 px-8 rounded-[8px] ">Demo Drive</button>
                     </div>
                 </div>
             </div>
             
 
             {/* Model 3 */}
-            <div className="bg-cover bg-center bg-no-repeat h-screen  " style={{ backgroundImage: "url('/images/m3a.jpg')" }}>
-            <div className=" items-center flex flex-col w-full pt-2">
-                <div className="flex flex-col items-center gap-1">
+            <div className="bg-cover bg-center bg-no-repeat h-[100vh]" style={{ backgroundImage: "url('/images/m3a.jpg')" }}>
+            <div className=" items-center justify-center flex flex-col w-full pt-16">
+                <div className="flex flex-col items-center gap-1 w-full">
                     <p className="text-[3rem] lg:text-[4rem] text-white font-extrabold">Model 3</p>
                     <u className="text-[2rem] lg:text-[1rem] md:hidden text-white font-bold">0% ARP <br /> Avaliable</u>
                     <u className="text-[2rem] lg:text-[2rem] hidden md:block text-white font-bold">0% ARP  Avaliable</u>
@@ -37,17 +37,17 @@ const Heroone=()=>{
                 </div>
 
 
-                <div className="pt-56 md:pt-[20rem] lg:pt-[30rem] xl:pt-[24rem] md:block  gap-2  m-auto flex flex-col">
-                    <button className="bg-blue-600 text-white font-semibold mt-2 text-[10px] py-2 px-16 rounded-[8px] ml-6">Order Now</button>
-                    <button className="bg-white text-neutral-600 mt-2 font-semibold text-[10px] py-2 px-16 rounded-[8px] ml-6">Experience Model 3</button>
+                <div className="pt-[3rem] md:pt-[8rem] lg:pt-[17rem] xl:pt-[11rem] justify-center gap-4 flex w-full items-center">
+                    <button className="bg-blue-600 text-white font-semibold  text-[10px] py-2 px-8 rounded-[8px] ">Order Now</button>
+                    <button className="bg-white text-neutral-600 font-semibold text-[10px] py-2 px-8 rounded-[8px] ">Demo Drive</button>
                 </div>
             </div>
             </div>
 
             {/* Model X */}
-            <div className="bg-cover bg-center bg-no-repeat h-screen   " style={{ backgroundImage: "url('/images/xxx.jpg')" }}>
-                <div className=" items-center flex flex-col w-full pt-1">
-                    <div className="flex flex-col items-center gap-3">
+            <div className="bg-cover bg-center bg-no-repeat h-screen" style={{ backgroundImage: "url('/images/xxx.jpg')" }}>
+                <div className=" items-center justify-center flex flex-col w-full pt-16">
+                    <div className="flex flex-col items-center gap-1 w-full">
                         <p className="text-[3rem] md lg:text-[4rem] text-white font-extrabold">Model X</p>
                         <p className="text-[2rem] lg:text-[rem] text-white font-extrabold">From $65,990</p>
                         <u className="text-sm lg:text-[1rem] text-white font-bold">After Federal Taxx Credit $7,500</u>
@@ -55,26 +55,26 @@ const Heroone=()=>{
                     </div>
 
 
-                    <div className="pt-56 md:pt-[17rem] lg:pt-[27rem] xl:pt-[21rem]  md:block  gap-2  m-auto flex flex-col">
-                        <button className="bg-blue-600 text-white font-semibold mt-2 text-[10px] py-2 px-16 rounded-[8px] ml-6">Order Now</button>
-                        <button className="bg-white text-neutral-600 mt-2 font-semibold text-[10px] py-2 px-16 rounded-[8px] ml-6">Demo Drive</button>
+                    <div className="pt-[3rem] md:pt-[8rem] lg:pt-[17rem] xl:pt-[11rem] justify-center gap-4 flex w-full items-center">
+                        <button className="bg-blue-600 text-white font-semibold  text-[10px] py-2 px-8 rounded-[8px] ">Order Now</button>
+                        <button className="bg-white text-neutral-600 font-semibold text-[10px] py-2 px-8 rounded-[8px] ">Demo Drive</button>
                     </div>
                 </div>
             </div>
 
             {/* Model S */}
             <div className="bg-cover bg-center bg-no-repeat h-screen " style={{ backgroundImage: "url('/images/ms.jpg')" }}>
-                <div className=" items-center flex flex-col w-full pt-1">
-                    <div className="flex flex-col items-center gap-3">
+                <div className=" items-center justify-center flex flex-col w-full pt-16">
+                    <div className="flex flex-col items-center gap-1 w-full">
                         <p className="text-[3rem] md lg:text-[4rem] text-white font-extrabold">Model S</p>
                         <p className="text-[2rem] md:text-[2rem] lg:text-[rem] text-white font-extrabold">From $68,490</p>
                         <u className="text-sm lg:text-[1rem] text-white font-bold">After Est. Gas Saving $6,500</u>
                     </div>
 
 
-                    <div className="md:pt-[20rem] lg:pt-[29rem] xl:pt-[23rem] pt-[16rem] md:block  gap-2  m-auto flex flex-col">
-                        <button className="bg-blue-600 text-white font-semibold mt-2 text-[10px] py-2 px-16 rounded-[8px] ml-6">Order Now</button>
-                        <button className="bg-white text-neutral-600 mt-2 font-semibold text-[10px] py-2 px-16 rounded-[8px] ml-6">Demo Drive</button>
+                    <div className="pt-[3rem] md:pt-[8rem] lg:pt-[17rem] xl:pt-[11rem] justify-center gap-4 flex w-full items-center">
+                        <button className="bg-blue-600 text-white font-semibold  text-[10px] py-2 px-8 rounded-[8px] ">Order Now</button>
+                        <button className="bg-white text-neutral-600 font-semibold text-[10px] py-2 px-8 rounded-[8px] ">Demo Drive</button>
                     </div>
                 </div>
             </div>

@@ -14,7 +14,7 @@ import { IoMenu } from "react-icons/io5";
 
 
 const Navbar=()=>{
-    const [showMenu, setShowMenu]=useState(true);
+    const [showMenu, setShowMenu]=useState(false);
     const [showVehicle, setShowVehicle]=useState(false);
     const [showEnergy, setShowEnergy]=useState(false);
     const [showCharging, setShowCharging]=useState(false);
@@ -99,11 +99,11 @@ const Navbar=()=>{
 
         <nav className="relative" >
             <div>
-                <p className="flex m-auto w-full items-center fixed z-50 p-5  justify-center text-#171a20 text-[10px] md:text-sm gap-3 pt-5 bg-gray-200 px-[1rem] ">0% APR avaliable for Model 3 and Model Y. <u>Learn More</u></p>
+                <p className="flex m-auto w-full items-center fixed z-50 py-2  justify-center text-#171a20 text-[10px] md:text-sm gap-3  bg-gray-200 px-[1rem] ">0% APR avaliable for Model 3 and Model Y. <u>Learn More</u></p>
             </div>
 
             {/* main navbar */}
-            <div className="flex justify-between items-center px-[1rem] md:px-[3rem] mt-[3rem] fixed z-50 shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] bg-white w-full p-6 bg-opacity-45 backdrop-blur-xl font-bold  ">
+            <div className="flex justify-between items-center px-[1rem] md:px-[3rem] mt-[2rem] fixed z-50 shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] bg-white w-full  bg-opacity-45 backdrop-blur-xl font-bold py-3 ">
 
                <div className='flex items-center w-full lg:w-fit'>
                     <Link href={'/'}>
