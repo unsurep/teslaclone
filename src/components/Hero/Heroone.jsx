@@ -81,47 +81,49 @@ const Heroone=()=>{
 
             {/* Cyber Truck */}
             <div className="bg-cover bg-center bg-no-repeat h-screen" style={{ backgroundImage: "url('/images/ct.jpg')" }}>
-                <div className=" items-center flex flex-col w-full pt-3">
+                <div className=" items-center flex flex-col w-full pt-16">
                     <div className="pt-8">
                         <img src="/images/cyberbg.png" width={300} height={300} alt="image_tesla"/>
 
                     </div>
 
 
-                    <div className="md:pt-[20rem] lg:pt-[32rem] xl:pt-[26rem] pt-64 md:block  gap-2  m-auto flex flex-col">
-                        <button className="bg-zinc-950 text-neutral-400 font-semibold mt-2 text-[10px] py-2 px-16  ml-6">Order Now</button>
-                        <button className="bg-zinc-950 text-neutral-400 mt-2 font-semibold text-[10px] py-2 px-16  ml-6">Demo Drive</button>
+                    <div className="pt-[3rem] md:pt-[8rem] lg:pt-[17rem] xl:pt-[11rem] justify-center gap-4 flex w-full items-center">
+                        <button className="bg-zinc-950 hover:text-white text-neutral-400 font-semibold text-[10px] py-2 px-8 rounded-[8px]">ORDER NOW</button>
+                        <button className="bg-zinc-950 hover:text-white text-neutral-400 font-semibold text-[10px] py-2 px-8 rounded-[8px]">DEMO DRIVE</button>
                     </div>
                 </div>
-            </div>
+            </div> 
+
+         
             
             {/* solar panel A & B */}
             <div className="w-full" >
                 {/* solar panel A */}
-                <div className="bg-cover bg-center bg-no-repeat w-full " style={{ backgroundImage: "url('/images/roof1.jpg')" }}>
-                    <div className="flex flex-col items-center pt-2">
-                        <h1 className="text-[2rem] lg:text-[3rem] text-neutral-500 font-bold">Solar Roof</h1>
-                        <p className="text-sm lg:text-[1rem] text-white font-bold">Produce Clean Energy From Your Roof</p>
+                <div className="bg-cover bg-center bg-no-repeat h-screen w-full" style={{ backgroundImage: "url('/images/roof1.jpg')" }}>
+                    <div className="items-center flex flex-col w-full pt-16">
+                        <h1 className="text-[2rem] lg:text-[3rem] text-white font-bold">Solar Roof</h1>
+                        <p className="text-sm md:text-[2rem] underline cursor-pointer text-white font-bold">Schedule a Virtual Consultation</p>
                     </div>
 
-                    <div className="pt-[18rem] flex flex-col items-center pb-3 ">
-                        <button className="bg-blue-600 text-white font-semibold mt-2 text-[10px] py-2 px-16 rounded-[8px] ml-6">Order Now</button>
-                        <button className="bg-white text-neutral-600 mt-2 font-semibold text-[10px] py-2 px-16 rounded-[8px] ml-6">Learn More</button>
+                    <div className="pt-[3rem] md:pt-[8rem] lg:pt-[17rem] xl:pt-[11rem] justify-center gap-4 flex w-full items-center">
+                        <button className="bg-blue-600 text-white font-semibold  text-[10px] py-2 px-8 rounded-[8px] ">Order Now</button>
+                        <button className="bg-white text-neutral-600 font-semibold text-[10px] py-2 px-8 rounded-[8px] ">Demo Drive</button>
                     </div>
                 </div>
 
 
 
                 {/* Solar panel B */}
-                <div className="bg-cover bg-center bg-no-repeat w-full " style={{ backgroundImage: "url('/images/roof2.jpg')" }}>
-                    <div className="flex flex-col items-center pt-2">
-                        <h1 className="text-[2rem] lg:text-[3rem] text-neutral-500 font-bold">Solar Roof</h1>
-                        <p className="text-sm lg:text-[1rem] text-white font-bold">Produce Clean Energy From Your Roof</p>
+                <div className="bg-cover bg-center bg-no-repeat w-full h-screen" style={{ backgroundImage: "url('/images/roof2.jpg')" }}>
+                    <div className="items-center flex flex-col w-full pt-16">
+                        <h1 className="text-[2rem] lg:text-[3rem] text-white font-bold">Solar Roof</h1>
+                        <p className="text-sm lg:text-[2rem] underline cursor-pointer text-white font-bold">Produce Clean Energy From Your Roof</p>
                     </div>
 
-                    <div className="pt-[18rem] flex flex-col items-center pb-3 ">
-                        <button className="bg-blue-600 text-white font-semibold mt-2 text-[10px] py-2 px-16 rounded-[8px] ml-6">Order Now</button>
-                        <button className="bg-white text-neutral-600 mt-2 font-semibold text-[10px] py-2 px-16 rounded-[8px] ml-6">Learn More</button>
+                    <div className="pt-[3rem] md:pt-[8rem] lg:pt-[17rem] xl:pt-[11rem] justify-center gap-4 flex w-full items-center">
+                        <button className="bg-blue-600 text-white font-semibold  text-[10px] py-2 px-8 rounded-[8px] ">Order Now</button>
+                        <button className="bg-white text-neutral-600 font-semibold text-[10px] py-2 px-8 rounded-[8px] ">Demo Drive</button>
                     </div>
                 </div>
             </div>
