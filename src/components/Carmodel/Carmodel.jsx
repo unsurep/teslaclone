@@ -8,6 +8,10 @@ import { FaRegUserCircle } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import Image from "next/image";
 
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 
 
@@ -25,6 +29,13 @@ import { Navigation } from 'swiper/modules';
 
 
 const Carmodel = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true, // Animation triggers only once on scroll
+    });
+  }, []);
 
     const [showMenu, setShowMenu]=useState(false);
     const [showVehicle, setShowVehicle]=useState(false);
@@ -797,7 +808,7 @@ const Carmodel = () => {
 
 
         </Swiper> 
-            </div>
+        </div>
 
           {/* div n pic */}
           <div className="bg-black pt-40 px-[12rem]  flex text-white">
@@ -805,7 +816,7 @@ const Carmodel = () => {
               <Image src="/images/dashb.jpg" width={700} height={700} alt="tesla_image"/>
             </div>
 
-            <div className="pl-20 flex flex-col gap-4 justify-center">
+            <div data-aos="fade-up" data-aos-duration="2000" className="pl-20 flex flex-col gap-4 justify-center">
               <h3 className="font-bold">Stay Connected</h3>
               <p className="text-sm">Instantly connect with multi-device Bluetooth, or fast charge devices with wireless and 36-watt USB-C charging.</p>
             </div>
