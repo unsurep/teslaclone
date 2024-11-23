@@ -32,7 +32,7 @@ const Navbar=()=>{
         setShowEnergy(false);
         setShowCharging(false);
         setShowDiscover(false);
-        setSignin(false);
+        
     }
 
     const toggleShowVehicle=()=>{
@@ -41,7 +41,7 @@ const Navbar=()=>{
         setShowCharging(false);
         setShowDiscover(false);
         setShowShop(false);
-        setSignin(false);
+        
     }
 
     const toggleShowEnergy=()=>{
@@ -50,7 +50,7 @@ const Navbar=()=>{
         setShowCharging(false);
         setShowDiscover(false);
         setShowShop(false);
-        setSignin(false);
+        
     }
 
     const toggleShowCharging=()=>{
@@ -59,7 +59,7 @@ const Navbar=()=>{
         setShowEnergy(false);
         setShowDiscover(false);
         setShowShop(false);
-        setSignin(false);
+        
     }
 
     const toggleShowDiscover=()=>{
@@ -68,19 +68,11 @@ const Navbar=()=>{
         setShowEnergy(false);
         setShowVehicle(false);
         setShowShop(false);
-        setSignin(false);
+        
     }
 
 
-    // onclick function for mobile screens
-
-    // const [vehicle, setVehicle]=useState(false);
-
-    
-    //  const toggleVehicle=()=>{
-    //     setVehicle(!false);
-    //  }
-
+   
    
 
     
@@ -112,7 +104,7 @@ const Navbar=()=>{
                     
                     <div onClick={toggleShowMenu} className='ml-auto text-2xl flex lg:hidden '>
                         {showMenu===true? <div className='text-2xl   w-fit'><IoMdClose/>
-                        <div className='absolute top-[4.5rem] right-0 text-base bg-white h-screen w-full py-3   '>
+                        <div className='absolute top-[3rem] right-0 text-base bg-white h-screen w-full py-3   '>
                             <ul className='flex flex-col gap-3 items-center'>
                                 <Link href={'/'}>
                                     <li className='underline'>Home</li>

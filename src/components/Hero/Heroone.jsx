@@ -21,7 +21,7 @@ const Heroone=()=>{
                     </div>
 
 
-                    <div className="pt-[3rem] md:pt-[8rem] lg:pt-[17rem] xl:pt-[11rem] justify-center gap-4 flex w-full items-center">
+                    <div className="pt-[8rem] lg:pt-[17rem] xl:pt-[11rem] justify-center gap-4 flex w-full items-center">
                         <button className="bg-blue-600 text-white font-semibold  text-[10px] py-2 px-8 rounded-[8px] ">Order Now</button>
                         <button className="bg-white text-neutral-600 font-semibold text-[10px] py-2 px-8 rounded-[8px] ">Demo Drive</button>
                     </div>
@@ -40,7 +40,7 @@ const Heroone=()=>{
                 </div>
 
 
-                <div className="pt-[3rem] md:pt-[8rem] lg:pt-[17rem] xl:pt-[11rem] justify-center gap-4 flex w-full items-center">
+                <div className="pt-[8rem] lg:pt-[17rem] xl:pt-[11rem] justify-center gap-4 flex w-full items-center">
                     <button className="bg-blue-600 text-white font-semibold  text-[10px] py-2 px-8 rounded-[8px] ">Order Now</button>
                     <button className="bg-white text-neutral-600 font-semibold text-[10px] py-2 px-8 rounded-[8px] ">Demo Drive</button>
                 </div>
@@ -48,7 +48,7 @@ const Heroone=()=>{
             </div>
 
             {/* Model X */}
-            <div className="bg-cover bg-center bg-no-repeat h-screen" style={{ backgroundImage: "url('/images/xxx.jpg')" }}>
+            <div className="bg-cover bg-center bg-no-repeat h-screen" style={{ backgroundImage: "url('/images/ms1.jpg')" }}>
                 <div className=" items-center justify-center flex flex-col w-full pt-16">
                     <div className="flex flex-col items-center gap-1 w-full">
                         <p className="text-[3rem] md lg:text-[4rem] text-white font-extrabold">Model X</p>
@@ -58,7 +58,7 @@ const Heroone=()=>{
                     </div>
 
 
-                    <div className="pt-[3rem] md:pt-[8rem] lg:pt-[17rem] xl:pt-[11rem] justify-center gap-4 flex w-full items-center">
+                    <div className="pt-[8rem] lg:pt-[17rem] xl:pt-[11rem] justify-center gap-4 flex w-full items-center">
                         <button className="bg-blue-600 text-white font-semibold  text-[10px] py-2 px-8 rounded-[8px] ">Order Now</button>
                         <button className="bg-white text-neutral-600 font-semibold text-[10px] py-2 px-8 rounded-[8px] ">Demo Drive</button>
                     </div>
@@ -75,7 +75,7 @@ const Heroone=()=>{
                     </div>
 
 
-                    <div className="pt-[3rem] md:pt-[8rem] lg:pt-[17rem] xl:pt-[11rem] justify-center gap-4 flex w-full items-center">
+                    <div className="pt-[8rem] lg:pt-[17rem] xl:pt-[11rem] justify-center gap-4 flex w-full items-center">
                         <button className="bg-blue-600 text-white font-semibold  text-[10px] py-2 px-8 rounded-[8px] ">Order Now</button>
                         <button className="bg-white text-neutral-600 font-semibold text-[10px] py-2 px-8 rounded-[8px] ">Demo Drive</button>
                     </div>
@@ -91,7 +91,7 @@ const Heroone=()=>{
                     </div>
 
 
-                    <div className="pt-[3rem] md:pt-[8rem] lg:pt-[17rem] xl:pt-[11rem] justify-center gap-4 flex w-full items-center">
+                    <div className="pt-[8rem] lg:pt-[17rem] xl:pt-[11rem] justify-center gap-4 flex w-full items-center">
                         <button className="bg-zinc-950 hover:text-white text-neutral-400 font-semibold text-[10px] py-2 px-8 rounded-[8px]">ORDER NOW</button>
                         <button className="bg-zinc-950 hover:text-white text-neutral-400 font-semibold text-[10px] py-2 px-8 rounded-[8px]">DEMO DRIVE</button>
                     </div>
@@ -109,7 +109,7 @@ const Heroone=()=>{
                         <p className="text-sm md:text-[2rem] underline cursor-pointer text-white font-bold">Schedule a Virtual Consultation</p>
                     </div>
 
-                    <div className="pt-[3rem] md:pt-[8rem] lg:pt-[17rem] xl:pt-[11rem] justify-center gap-4 flex w-full items-center">
+                    <div className="pt-[8rem] lg:pt-[17rem] xl:pt-[11rem] justify-center gap-4 flex w-full items-center">
                         <button className="bg-blue-600 text-white font-semibold  text-[10px] py-2 px-8 rounded-[8px] ">Order Now</button>
                         <button className="bg-white text-neutral-600 font-semibold text-[10px] py-2 px-8 rounded-[8px] ">Demo Drive</button>
                     </div>
@@ -124,7 +124,7 @@ const Heroone=()=>{
                         <p className="text-sm lg:text-[2rem] underline cursor-pointer text-white font-bold">Produce Clean Energy From Your Roof</p>
                     </div>
 
-                    <div className="pt-[3rem] md:pt-[8rem] lg:pt-[17rem] xl:pt-[11rem] justify-center gap-4 flex w-full items-center">
+                    <div className="pt-[8rem] lg:pt-[17rem] xl:pt-[11rem] justify-center gap-4 flex w-full items-center">
                         <button className="bg-blue-600 text-white font-semibold  text-[10px] py-2 px-8 rounded-[8px] ">Order Now</button>
                         <button className="bg-white text-neutral-600 font-semibold text-[10px] py-2 px-8 rounded-[8px] ">Demo Drive</button>
                     </div>
@@ -139,7 +139,7 @@ const Heroone=()=>{
                     </div>
 
 
-                    <div className="pt-[3rem] md:pt-[8rem] lg:pt-[17rem] xl:pt-[11rem] justify-center gap-4 flex w-full items-center">
+                    <div className="pt-[8rem] lg:pt-[17rem] xl:pt-[11rem] justify-center gap-4 flex w-full items-center">
                         <button className="bg-blue-600 text-white font-semibold  text-[10px] py-2 px-8 rounded-[8px] ">Order Now</button>
                         <button className="bg-white text-neutral-600 font-semibold text-[10px] py-2 px-8 rounded-[8px] ">Demo Drive</button>
                     </div>
@@ -154,7 +154,7 @@ const Heroone=()=>{
                     </div>
 
 
-                    <div className="pt-[3rem] md:pt-[8rem] lg:pt-[17rem] xl:pt-[11rem] justify-center gap-4 flex w-full items-center">
+                    <div className="pt-[8rem] lg:pt-[17rem] xl:pt-[11rem] justify-center gap-4 flex w-full items-center">
                         <button className="bg-blue-600 text-white font-semibold  text-[10px] py-2 px-8 rounded-[8px] ">Shop Now</button>
                     </div>
                 </div>
