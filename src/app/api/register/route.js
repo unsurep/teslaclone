@@ -11,7 +11,7 @@ export const POST = async (res, req)=>{
         // calling database connection
         await dbConnect()
 
-        // prevent user from registring twic with the same email address
+        // prevent user from registring twice with the same email address
         const userExists = await userModel.findOne({email:email});
         if (userExists) {
             return new NextResponse(JSON.stringify({msg:'user already exisst'}), {status:200});
@@ -36,7 +36,7 @@ export const POST = async (res, req)=>{
      
     catch (error) {
         console.log(error.message)
-        return new NextResponse(JSON.stringify({msg:'server error'}), {status:500});
+        return new NextResponse(JSON.stringify({msg:'Error! Check server:'}), {status:500});
         
     }
 

@@ -28,20 +28,28 @@ const Register = () => {
         }
 
         setLoading(true);
+        setError('');
 
         // calling API now
         try {
             const res = await axios.post('http://localhost:3000/api/register', { region, name, email, password });
-            if (res.status === 401) {
-                setError('Unauthorized access');
-            } else if (res.status === 200) {
-                router.push('/login');
-            }
             console.log(res);
+
+            if (res.status===201){
+                router.replace ('/login')
+            }
+
+            else {
+                setError('Registration failed. Try again later')
+            }
+
         } catch (error) {
-            setError(error.message);
+            setError('Error! check your server:');
         }
-        setLoading(false);
+
+        finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -96,7 +104,7 @@ const Register = () => {
                     </div>
 
                     <div className="mt-8">
-                        <button type="submit" className="bg-blue-500 text-white w-full py-2 rounded-md">
+                        <button onSubmit={submitHandler} type="submit" className="bg-blue-500 text-white w-full py-2 rounded-md">
                             {loading ? "Loading..." : 'Next'}
                         </button>
                     </div>
